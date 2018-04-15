@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const engine = require('ejs-mate');
+const seedDatabase = require('./seeds');
 
 // ==============
 // APP CONFIG
@@ -11,23 +12,20 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 mongoose.connect('mongodb://localhost/dfc_guide');
 
-// ==============
-// SCHEMAS
-// ==============
-const Item = require('./models/item');
+seedDatabase();
 
 // ===============
 // ROUTES
 // ===============
 app.get('/', (req, res) => {
-    res.render('home');
-})
+  res.render('home');
+});
 
 // RESOURCE ROUTES
 app.get('/item/:id', (req, res) => {
-    res.render('item/show');
-})
+  res.render('item/show');
+});
 
 app.listen(3000, () => {
-    console.log('Server is running...');
-})
+  console.log('Server is running...');
+});
