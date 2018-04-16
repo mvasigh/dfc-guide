@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const engine = require('ejs-mate');
-const seedDatabase = require('./seeds');
+// const seedDatabase = require('./seeds');
 
 // ==============
 // APP CONFIG
@@ -11,8 +11,6 @@ app.engine('ejs', engine);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 mongoose.connect('mongodb://localhost/dfc_guide');
-
-seedDatabase();
 
 // ===============
 // ROUTES
