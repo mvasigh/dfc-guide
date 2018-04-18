@@ -14,53 +14,14 @@
                 <div class="content">
                     <%= item.content %>
                 </div>
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button" href="/item/<%= item._id %>/edit">Edit</a>
+                    </p>
+                    <form class="control" action="/item/<%= item._id %>?_method=DELETE" method="POST">
+                        <button class="button is-danger">Delete</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- <div class="card">
-        <div class="card-body">
-            <h3 class="card-title">Enrolling in Medicare</h3>
-            <div class="card-tags mb-3">
-                <span class="badge badge-pill badge-info">Low-cost</span>
-                <span class="badge badge-pill badge-info">Homeless</span>
-                <span class="badge badge-pill badge-info">Elderly</span>
-                <span class="badge badge-pill badge-info">Spanish</span>
-            </div>
-            <div class="card-text">
-                <p>People age 65 or older, people under age 65 with certain disabilities (receiving Social Security disability
-                    benefits), and people of all ages with End-Stage Renal Disease.</p>
-                <p>Medicare has four parts:</p>
-                <ul>
-                    <li>
-                        <strong>Part A</strong> - Inpatient Insurance - hospitals, nursing homes, home health, hospice
-                        <em>most people do not have to pay for Part A</em>
-                    </li>
-                    <li>
-                        <strong>Part B</strong> - Medical Insurance -
-                        <em>most people pay monthly for Part B</em>
-                    </li>
-                    <li>
-                        <strong>Part C</strong> - Medicare Advantage - beneficiaries also enroll in private insurance (may cover
-                        more then what Medicare covers or require reduced payments, Medicare pays the insurer a fixed amount
-                        per month)</li>
-                    <li>
-                        <strong>Part D</strong> - Prescription drug benefit</li>
-                </ul>
-                <p>For more information:
-                    <br>
-                    <a href="http://www.medicare.gov/default.aspx">http://www.medicare.gov/default.aspx</a>
-                </p>
-                <p>Enroll here:
-                    <br>
-                    <a href="http://www.medicare.gov/people-like-me/new-to-medicare/getting-started-with-medicare.html">http://www.medicare.gov/people-like-me/new-to-medicare/getting-started-with-medicare.html</a>
-                </p>
-                <h5>Application Assitance</h5>
-                <p>Community centers offering assitance with Medicare applications.</p>
-                <p>
-                    <a href="/docs/Application Assistance.pdf">Application Assistance</a>
-                </p>
-
-            </div>
-        </div>
-    </div> -->

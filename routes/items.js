@@ -65,4 +65,14 @@ router.put('/:id', (req, res) => {
   });
 });
 
+// DESTROY - delete the item from database
+router.delete('/:id', (req, res) => {
+  Item.findByIdAndRemove(req.params.id, err => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect('/item');
+  });
+});
+
 module.exports = router;
