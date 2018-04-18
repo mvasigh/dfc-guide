@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const engine = require('ejs-mate');
 const bodyParser = require('body-parser');
-// const seedDatabase = require('./seeds');
+const seedDatabase = require('./seeds');
+const methodOverride = require('method-override');
 
 const itemRoutes = require('./routes/items');
 
@@ -15,6 +16,7 @@ app.engine('ejs', engine);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 // ===============
 // ROUTES

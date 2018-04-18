@@ -43,4 +43,26 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// EDIT - show item edit form
+router.get('/:id/edit', (req, res) => {
+  Item.findById(req.params.id, (err, item) => {
+    if (err) {
+      res.redirect('back');
+    } else {
+      res.render('item/edit', { item: item });
+    }
+  });
+});
+
+// UPDATE - update database with input
+router.put('/:id', (req, res) => {
+  Item.findByIdAndUpdate(req.params.id, req.body.item, (err, item) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect(`/item/${req.params.id}`);
+    }
+  });
+});
+
 module.exports = router;
