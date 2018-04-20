@@ -24,6 +24,10 @@ app.use(methodOverride('_method'));
 app.use('/item', itemRoutes);
 
 app.get('/', (req, res) => {
+  res.redirect('/home');
+});
+
+app.get('/home', (req, res) => {
   Item.find({}, (err, items) => {
     if (err) {
       res.render('home', { items: [] });
