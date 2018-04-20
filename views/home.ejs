@@ -1,21 +1,112 @@
 <% layout('layout') %>
 
-<section class="hero is-link is-bold is-medium">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                DFC Guide
-            </h1>
-            <h2 class="subtitle">
-                Access to Care and Community Resources
-            </h2>
-            <form>
-                <div class="field">
-                    <div class="control">
-                        <input type="text" class="input is-medium is-rounded" placeholder="Search the Guide...">
+    <section class="hero is-link is-bold is-medium">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    DFC Guide
+                </h1>
+                <h2 class="subtitle">
+                    Access to Care and Community Resources
+                </h2>
+                <div class="columns is-centered">
+                    <div class="column is-half is-narrow">
+                        <form>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="text" class="input is-medium is-rounded" placeholder="Search the Guide...">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Getting Started</h1>
+            <div class="columns">
+                <div class="column is-4">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Introduction</p>
+                            <a href="#" class="card-header-icon">
+                                <span class="icon">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>Pellentesque nibh dolor, elementum sed tristique nec, mattis cursus nibh. Sed a molestie
+                                    velit, nec varius ante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">How to Use the Guide</p>
+                            <a href="#" class="card-header-icon">
+                                <span class="icon">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>Pellentesque nibh dolor, elementum sed tristique nec, mattis cursus nibh. Sed a molestie
+                                    velit, nec varius ante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Browse Community Resources</p>
+                            <a href="#" class="card-header-icon">
+                                <span class="icon">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>Pellentesque nibh dolor, elementum sed tristique nec, mattis cursus nibh. Sed a molestie
+                                    velit, nec varius ante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="title">Popular Resources</h1>
+            <h2 class="subtitle has-text-grey">Pellentesque vel pulvinar magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</h2>
+            <div class="columns is-multiline">
+                <% items.forEach(item => { %>
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <%= item.title %>
+                                </p>
+                                <a href="item/<%= item._id %>" class="card-header-icon">
+                                    <span class="icon">
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </a>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        <%= item.description %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+    </section>

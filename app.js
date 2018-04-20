@@ -4,7 +4,7 @@ const engine = require('ejs-mate');
 const bodyParser = require('body-parser');
 const seedDatabase = require('./seeds');
 const methodOverride = require('method-override');
-
+const Item = require('./models/item');
 const itemRoutes = require('./routes/items');
 
 // ==============
@@ -24,7 +24,13 @@ app.use(methodOverride('_method'));
 app.use('/item', itemRoutes);
 
 app.get('/', (req, res) => {
-  res.render('home');
+  Item.find({}, (err, items) => {
+    if (err) {
+      res.render('home', { items: [] });
+    } else {
+      res.render('home', { items: items });
+    }
+  });
 });
 
 app.listen(3000, () => {
