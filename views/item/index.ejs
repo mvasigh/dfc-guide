@@ -2,16 +2,19 @@
 
   <section class="section">
     <div class="container">
-      <% items.forEach(item => { %>
-        <div class="box">
-          <h1 class="title">
-            <%= item.title %>
-          </h1>
-          <div class="content">
-            <%= item.description %>
-          </div>
-          <a class="button is-link" href="/item/<%= item.id %>">View Resource</a>
-        </div>
-        <% }) %>
+      <% if (search.length > 0) { %>
+        <h2 class="subtitle">Here are your search results for "<%= search %>"</h2>
+        <% } %>
+          <% items.forEach(item => { %>
+            <div class="box">
+              <h1 class="title">
+                <%= item.title %>
+              </h1>
+              <div class="content">
+                <%= item.description %>
+              </div>
+              <a class="button is-link" href="/item/<%= item.id %>">View Resource</a>
+            </div>
+            <% }) %>
     </div>
   </section>

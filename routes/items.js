@@ -1,15 +1,23 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 const Item = require('../models/item');
+const Fuse = require('fuse.js');
 
 // INDEX - show all items
 router.get('/', (req, res) => {
   Item.find({}, (err, items) => {
     if (err) {
       console.log(err);
-      res.redirect('back');
     } else {
-      res.render('item/index', { items: items });
+      if (req.query.search) {
+        const fuse = new Fuse(items, fuseOptions);
+        res.render('item/index', {
+          items: fuse.search(req.query.search),
+          search: req.query.search
+        });
+      } else {
+        res.render('item/index', { items: items, search: '' });
+      }
     }
   });
 });
@@ -74,5 +82,11 @@ router.delete('/:id', (req, res) => {
     res.redirect('/item');
   });
 });
+
+const fuseOptions = {
+  keys: ['title'],
+  minMatchCharLength: 1,
+  shouldSort: true
+};
 
 module.exports = router;
