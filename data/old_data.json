@@ -1,0 +1,1316 @@
+{
+  "items" : {
+    "application-assistance" : {
+      "content" : "",
+      "title" : "Application Assistance"
+    },
+    "bathe-assessment" : {
+      "content" : "To obtain a psychosocial history, understand the patient in the context of his/her total life situation.",
+      "title" : "BATHE Assessment"
+    },
+    "cage-assessment" : {
+      "content" : "CAGE Assessment (english)",
+      "title" : "CAGE Assessment"
+    },
+    "caring-with-compassion" : {
+      "content" : "A pocket guide for medical trainees in providing clinical care across the Bio-Psychosocial domains.",
+      "title" : "Caring with Compassion"
+    },
+    "cdc-recommended-vaccine-schedule" : {
+      "content" : "",
+      "title" : "CDC Recommended Vaccine Schedule"
+    },
+    "child-protective-services-in-harris-county" : {
+      "content" : "",
+      "title" : "Child Protective Services in Harris County (CPS)"
+    },
+    "community-youth-services" : {
+      "content" : "",
+      "title" : "Community Youth Services"
+    },
+    "covenant-house-crisis-line" : {
+      "content" : "",
+      "title" : "Covenant House Crisis Line"
+    },
+    "crisis-intervention-of-houston" : {
+      "content" : "",
+      "title" : "Crisis Intervention of Houston"
+    },
+    "education-and-child-care" : {
+      "content" : "",
+      "title" : "Education and Child Care"
+    },
+    "enrolling-in-medicare" : {
+      "content" : "",
+      "title" : "Enrolling in Medicare"
+    },
+    "enrolling-in-texas-medicaid-or-texas-chip" : {
+      "content" : "",
+      "title" : "Enrolling in Texas Medicaid or Texas CHIP"
+    },
+    "enrolling-in-the-health-insurance-marketplace" : {
+      "content" : "",
+      "title" : "Enrolling in the Health Insurance Marketplace"
+    },
+    "enrolling-in-the-texas-womens-health-program" : {
+      "content" : "",
+      "title" : "Enrolling in the Texas Women's Health Program"
+    },
+    "federally-qualified-health-centers" : {
+      "content" : "",
+      "title" : "Federally Qualified Health Centers"
+    },
+    "food-insecuriy-2" : {
+      "content" : "",
+      "title" : "Food Insecurity"
+    },
+    "gateway-to-care-patient-navigator-program" : {
+      "content" : "",
+      "title" : "Gateway to Care Patient Navigator Program"
+    },
+    "general-online-resources-dental" : {
+      "content" : "",
+      "title" : "General Online Resources"
+    },
+    "harris-county-autism-resources" : {
+      "content" : "",
+      "title" : "Harris County Autism Resources"
+    },
+    "harris-county-dental-clinics" : {
+      "content" : "",
+      "title" : "Harris County Dental Clinics"
+    },
+    "harris-county-dental-clinics-brief-handout" : {
+      "content" : "",
+      "title" : "Harris County Dental Clinics - Brief Handout"
+    },
+    "harris-county-intellectual-disability-and-autism-services" : {
+      "content" : "",
+      "title" : "Harris County Intellectual Disability and Autism Services"
+    },
+    "harris-county-nurse-health-hotline" : {
+      "content" : "",
+      "title" : "Harris County Nurse Health Hotline"
+    },
+    "harris-health-financial-assistance-program" : {
+      "content" : "",
+      "title" : "Harris Health Financial Assistance Program"
+    },
+    "harris-health-system" : {
+      "content" : "",
+      "title" : "Harris Health System"
+    },
+    "housing-utilities-and-health" : {
+      "content" : "",
+      "title" : "Housing, Utilities, and Health"
+    },
+    "houston-area-autism-support-groups" : {
+      "content" : "",
+      "title" : "Houston-Area Autism Support Groups"
+    },
+    "how-to-incorporate-advocacy" : {
+      "content" : "",
+      "title" : "How to Incorporate Advocacy Into Your Daily Routine"
+    },
+    "i-help-guide" : {
+      "content" : "This document includes questions you can ask patients to determine if your patients could benefit from legal advocacy.",
+      "title" : "I-HELP Guide"
+    },
+    "im-still-confused-i-dont-know-what-to-tell" : {
+      "content" : "",
+      "title" : "I'm still confused and I don't know what to tell my patient"
+    },
+    "immunization-help-line" : {
+      "content" : "",
+      "title" : "Immunization Help Line"
+    },
+    "income-support" : {
+      "content" : "",
+      "title" : "Income Support"
+    },
+    "legacy-community-health-services" : {
+      "content" : "",
+      "title" : "Legacy Community Health Services"
+    },
+    "legal-immigration-status" : {
+      "content" : "",
+      "title" : "Legal Immigration Status"
+    },
+    "mental-health-2" : {
+      "content" : "",
+      "title" : "Mental Health"
+    },
+    "mhmra-applied-behavioral-analysis-skip-program" : {
+      "content" : "",
+      "title" : "MHMRA Applied Behavioral Analysis (ABA) SkIP Program"
+    },
+    "mhmra-stars-program" : {
+      "content" : "",
+      "title" : "MHMRA STARS Program"
+    },
+    "mobile-immunization-clinics-providers" : {
+      "content" : "",
+      "title" : "Mobile Immunization Clinics/Providers"
+    },
+    "overview-of-health-insurance-options" : {
+      "content" : "",
+      "title" : "Overview of Health Insurance Options"
+    },
+    "patient-handouts" : {
+      "content" : "",
+      "title" : "Patient Handouts"
+    },
+    "patient-handouts-2" : {
+      "content" : "",
+      "title" : "Patient Handouts"
+    },
+    "patient-handouts-dental" : {
+      "content" : "",
+      "title" : "Patient Handouts"
+    },
+    "personal-and-family-stability" : {
+      "content" : "",
+      "title" : "Personal and Family Stability"
+    },
+    "public-insurance" : {
+      "content" : "",
+      "title" : "Public Insurance"
+    },
+    "recommended-immunizations" : {
+      "content" : "",
+      "title" : "Recommended Immunizations and Vaccine-Preventable Diseases"
+    },
+    "reduced-cost-prescription-drugs" : {
+      "content" : "",
+      "title" : "Reduced Cost Prescription Drugs"
+    },
+    "resources-for-women" : {
+      "content" : "",
+      "title" : "Resources for Women"
+    },
+    "safety-net-clinics" : {
+      "content" : "",
+      "title" : "Safety Net Clinics"
+    },
+    "screening-for-victims-of-human-trafficking" : {
+      "content" : "Screening for Human Trafficking Victims (english)",
+      "title" : "Screening for Victims of Human Trafficking"
+    },
+    "texas-2-1-1" : {
+      "content" : "",
+      "title" : "Texas 2-1-1"
+    },
+    "texas-youth-and-runaway-hotline" : {
+      "content" : "",
+      "title" : "Texas Youth and Runaway Hotline"
+    },
+    "the-immunization-partnership" : {
+      "content" : "",
+      "title" : "The Immunization Partnership"
+    },
+    "transportation" : {
+      "content" : "",
+      "title" : "Transportation"
+    },
+    "we-care-project" : {
+      "content" : "<p>Evidence-based 10-question survey for screening about the social determinants of health in the outpatient setting.</p><p>From Garg A, et al. <em>Improving the management of family psychosocial problems at low-income children's well-child care visits: The WE CARE Project.</em> Pediatrics 120, 547-558 (2007).</p><p><strong>Documents</p><p>WE CARE Project</p>http://pediatrics.aappublications.org/content/120/3/547.abstract",
+      "title" : "WE CARE Project"
+    }
+  },
+  "links" : {
+    "adolescent-issues" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Adolescent Issues",
+      "type" : "page",
+      "url" : ""
+    },
+    "adolescent-issues-2" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Adolescent Issues",
+      "type" : "page",
+      "url" : ""
+    },
+    "application-assistance" : {
+      "blurb" : "Community centers offering assistance with Gold Card/CHIP/Medicaid/Medicare applications.",
+      "tags" : "",
+      "title" : "Application Assistance",
+      "type" : "item",
+      "url" : ""
+    },
+    "autism-services" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Autism Services",
+      "type" : "page",
+      "url" : ""
+    },
+    "bathe-assessment" : {
+      "blurb" : "To obtain a psychosocial history, understand the patient in the context of his or her total life situation.",
+      "tags" : "",
+      "title" : "BATHE Assessment",
+      "type" : "item",
+      "url" : ""
+    },
+    "brighter-bites" : {
+      "blurb" : "http://brighterbites.org/",
+      "tags" : "",
+      "title" : "Brighter Bites",
+      "type" : "link",
+      "url" : "http://brighterbites.org/"
+    },
+    "cage-assessment" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "CAGE Assessment",
+      "type" : "item",
+      "url" : ""
+    },
+    "care-for-the-uninsured" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Care for the Uninsured",
+      "type" : "page",
+      "url" : ""
+    },
+    "caring-with-compassion" : {
+      "blurb" : "A pocket guide for medical trainees in providing clinical care across the Bio-Psychosocial domains.",
+      "tags" : "",
+      "title" : "Caring with Compassion",
+      "type" : "item",
+      "url" : ""
+    },
+    "cdc-recommended-vaccine-schedule" : {
+      "blurb" : "Recommended vaccine schedule and catch-up document designed for health care providers (not for patients)",
+      "tags" : "",
+      "title" : "CDC Recommended Vaccine Schedule",
+      "type" : "item",
+      "url" : ""
+    },
+    "child-protective-services-in-harris-county" : {
+      "blurb" : "A state-managed program through the Texas Department of Family and Protective Services (DFPS).",
+      "tags" : "",
+      "title" : "Child Protective Services in Harris County (CPS)",
+      "type" : "item",
+      "url" : ""
+    },
+    "childhood-hunger-screening" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Childhood Hunger Screening",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/Childhood%20hunger%20screening.pdf"
+    },
+    "children-at-risk" : {
+      "blurb" : "http://childrenatrisk.org/",
+      "tags" : "",
+      "title" : "Children at Risk",
+      "type" : "link",
+      "url" : "http://childrenatrisk.org/"
+    },
+    "clinic-options-specifically-for-kids" : {
+      "blurb" : "List of clinic locations and contact infromation for clinics that provide care for children based on a sliding scale.",
+      "tags" : "",
+      "title" : "Clinic Options Specifically for Kids",
+      "type" : "pdf",
+      "url" : ""
+    },
+    "collaborative-for-children" : {
+      "blurb" : "http://www.collabforchildren.org/",
+      "tags" : "",
+      "title" : "Collaborative for Children",
+      "type" : "link",
+      "url" : "http://www.collabforchildren.org/"
+    },
+    "community-resources" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Community Resources",
+      "type" : "page",
+      "url" : ""
+    },
+    "community-youth-services" : {
+      "blurb" : "A program of Harris County Protective Services for Children and Adults.",
+      "tags" : "",
+      "title" : "Community Youth Services",
+      "type" : "item",
+      "url" : ""
+    },
+    "covenant-house" : {
+      "blurb" : "https://www.covenanthouse.org/",
+      "tags" : "",
+      "title" : "Covenant House",
+      "type" : "link",
+      "url" : "https://www.covenanthouse.org/"
+    },
+    "covenant-house-crisis-line" : {
+      "blurb" : "The hotline connects teens with counselors that are available 24/7 as well as information and referrals for runaway and homeless youth.",
+      "tags" : "",
+      "title" : "Covenant House Crisis Line",
+      "type" : "item",
+      "url" : ""
+    },
+    "cppp" : {
+      "blurb" : "http://forabettertexas.org/economicopportunity.html",
+      "tags" : "",
+      "title" : "CPPP",
+      "type" : "link",
+      "url" : "http://forabettertexas.org/economicopportunity.html"
+    },
+    "crafft-assessment-for-substance-abuse" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "CRAFFT Assessment for Substance Abuse",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/CRAFFT%20assessment.pdf"
+    },
+    "crisis-intervention-of-houston" : {
+      "blurb" : "The hotline connects teens with counselors that are available 24/7 and offers resources to runaways and their families.",
+      "tags" : "",
+      "title" : "Crisis Intervention of Houston",
+      "type" : "item",
+      "url" : ""
+    },
+    "dental-services" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Dental Services",
+      "type" : "page",
+      "url" : ""
+    },
+    "domestic-violence" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Domestic Violence",
+      "type" : "page",
+      "url" : ""
+    },
+    "domestic-violence-2" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Domestic Violence",
+      "type" : "page",
+      "url" : ""
+    },
+    "early-childhood-education-and-parenting-support" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Early Childhood Education and Parenting Support",
+      "type" : "page",
+      "url" : ""
+    },
+    "early-matters" : {
+      "blurb" : "https://www.houston.org/earlymatters/",
+      "tags" : "",
+      "title" : "Early Matters",
+      "type" : "link",
+      "url" : "https://www.houston.org/earlymatters/"
+    },
+    "education" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Education",
+      "type" : "page",
+      "url" : ""
+    },
+    "education-and-child-care" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Education and Child Care",
+      "type" : "item",
+      "url" : ""
+    },
+    "education-and-how-to-screen-patients" : {
+      "blurb" : "Video course from Oregon State University on how to use screening tools and interview questions.",
+      "tags" : "",
+      "title" : "Education and How to Screen Patients",
+      "type" : "link",
+      "url" : "https://pace.oregonstate.edu/courses"
+    },
+    "enrolling-in-medicare" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Enrolling in Medicare",
+      "type" : "item",
+      "url" : ""
+    },
+    "enrolling-in-texas-medicaid-or-texas-chip" : {
+      "blurb" : "Who is eligible for Medicaid?",
+      "tags" : "",
+      "title" : "Enrolling in Texas Medicaid or Texas CHIP",
+      "type" : "item",
+      "url" : ""
+    },
+    "enrolling-in-the-health-insurance-marketplace" : {
+      "blurb" : "Or find out if you are eligible for Medicaid or CHIP",
+      "tags" : "",
+      "title" : "Enrolling in the Health Insurance Marketplace",
+      "type" : "item",
+      "url" : ""
+    },
+    "enrolling-in-the-texas-womens-health-program" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Enrolling in the Texas Women's Health Program",
+      "type" : "item",
+      "url" : ""
+    },
+    "ethnic-assessment-for-culturally-competent" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "ETHNIC Assessment for Culturally Competent Clinical Practice",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/ETHNIC%20assessment.pdf"
+    },
+    "evidence-based-questions" : {
+      "blurb" : "Evidence-based screening questions you can use to ask your patients about a variety of specific topics.",
+      "tags" : "",
+      "title" : "Evidence-Based Questions",
+      "type" : "page",
+      "url" : ""
+    },
+    "federally-qualified-health-centers" : {
+      "blurb" : "What are federally qualified health centers (FQHCs)?",
+      "tags" : "",
+      "title" : "Federally Qualified Health Centers",
+      "type" : "item",
+      "url" : ""
+    },
+    "financial-houston-employment-assistance-programs" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Financial-Houston-Employment Assistance Programs",
+      "type" : "page",
+      "url" : ""
+    },
+    "food-insecurity" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Food Insecurity",
+      "type" : "page",
+      "url" : ""
+    },
+    "food-insecurity-2" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Food Insecurity",
+      "type" : "item",
+      "url" : ""
+    },
+    "food-insecurity-3" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Food Insecurity",
+      "type" : "page",
+      "url" : ""
+    },
+    "for-a-better-texas" : {
+      "blurb" : "http://forabettertexas.org/kidscount.html",
+      "tags" : "",
+      "title" : "For a Better Texas",
+      "type" : "link",
+      "url" : "http://forabettertexas.org/kidscount.html"
+    },
+    "gateway-to-care-list-of-dental-services" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Gateway to Care List of Dental Services",
+      "type" : "pdf",
+      "url" : "http://www.gatewaytocare.org/SiteAssets/Gateway-to-Care/dental%20clinics.pdf"
+    },
+    "gateway-to-care-patient-navigator-program" : {
+      "blurb" : "Patient navigators help people access health care at the appropriate level.",
+      "tags" : "",
+      "title" : "Gateway to Care Patient Navigator Program",
+      "type" : "item",
+      "url" : ""
+    },
+    "general-online-resources-dental" : {
+      "blurb" : "A few websites that provide online resources for physicians and patients/families on oral health topics.",
+      "tags" : "",
+      "title" : "General Online Resources",
+      "type" : "item",
+      "url" : ""
+    },
+    "greater-houston-dental-society" : {
+      "blurb" : "List of local clinics (and eligibility requirements)",
+      "tags" : "",
+      "title" : "Greater Houston Dental Society",
+      "type" : "link",
+      "url" : "http://www.ghds.org/dental-care-resources.html"
+    },
+    "harris-county-autism-resources" : {
+      "blurb" : "A high-yield list of autism resources in Harris County including many organizations that provide scholarships and support groups.",
+      "tags" : "",
+      "title" : "Harris County Autism Resources",
+      "type" : "item",
+      "url" : ""
+    },
+    "harris-county-dental-clinics" : {
+      "blurb" : "A comprehensive, verified list of dental clinics in Harris County including free clinics, Harris Health System clinics and City of Houston clinics.",
+      "tags" : "",
+      "title" : "Harris County Dental Clinics",
+      "type" : "item",
+      "url" : ""
+    },
+    "harris-county-dental-clinics-brief-handout" : {
+      "blurb" : "A brief, high-yield handout of dental clinics in Harris County for kids and families provided by Harris County Public Health.",
+      "tags" : "",
+      "title" : "Harris County Dental Clinics - Brief Handout",
+      "type" : "item",
+      "url" : ""
+    },
+    "harris-county-intellectual-disability-and-autism-services" : {
+      "blurb" : "Mental Health Mental Retardation Authority (MHMRA) of Harris County",
+      "tags" : "",
+      "title" : "Harris County Intellectual Disability and Autism Services",
+      "type" : "item",
+      "url" : ""
+    },
+    "harris-county-nurse-health-hotline" : {
+      "blurb" : "Free, region-wide hotline for residents to call and receive advice and health information.",
+      "tags" : "",
+      "title" : "Harris County Nurse Health Hotline",
+      "type" : "item",
+      "url" : ""
+    },
+    "harris-health-financial-assistance-program" : {
+      "blurb" : "Formerly called the Gold Card",
+      "tags" : "",
+      "title" : "Harris Health Financial Assistance Program",
+      "type" : "item",
+      "url" : ""
+    },
+    "harris-health-system" : {
+      "blurb" : "The Harris Health System provides both primary and specialty care for residents of Harris County regardless of legal status.",
+      "tags" : "",
+      "title" : "Harris Health System",
+      "type" : "item",
+      "url" : ""
+    },
+    "heads-assessment" : {
+      "blurb" : "Typically used for adolescents but expanded here for use with patients of any age.",
+      "tags" : "",
+      "title" : "HEADS Assessment",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/HEADS%20assessment.pdf"
+    },
+    "health-care" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Health Care",
+      "type" : "page",
+      "url" : ""
+    },
+    "health-maintenance-for-adults" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Health Maintenance for Adults",
+      "type" : "page",
+      "url" : ""
+    },
+    "healthy-living-matters" : {
+      "blurb" : "http://www.healthylivingmatters.net/",
+      "tags" : "",
+      "title" : "Healthy Living Matters",
+      "type" : "link",
+      "url" : "http://www.healthylivingmatters.net/"
+    },
+    "homeless" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Homeless",
+      "type" : "page",
+      "url" : ""
+    },
+    "hospice-and-palliative-care" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Hospice and Palliative Care",
+      "type" : "page",
+      "url" : ""
+    },
+    "housing-utilities-and-health" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Housing, Utilities, and Health",
+      "type" : "item",
+      "url" : ""
+    },
+    "houston-area-autism-support-groups" : {
+      "blurb" : "Flyers for autism spectrum disorder support groups in different locations in the Greater Houston area.",
+      "tags" : "",
+      "title" : "Houston-Area Autism Support Groups",
+      "type" : "item",
+      "url" : ""
+    },
+    "houston-area-womens-shelter" : {
+      "blurb" : "http://www.hawc.org/",
+      "tags" : "",
+      "title" : "Houston Area Women's Shelter",
+      "type" : "link",
+      "url" : "http://www.hawc.org/"
+    },
+    "houston-food-bank" : {
+      "blurb" : "http://www.houstonfoodbank.org/",
+      "tags" : "",
+      "title" : "Houston Food Bank",
+      "type" : "link",
+      "url" : "http://www.houstonfoodbank.org/"
+    },
+    "how-to-incorporate-advocacy" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "How to Incorporate Advocacy Into Your Daily Routine",
+      "type" : "item",
+      "url" : ""
+    },
+    "human-trafficking" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Human Trafficking",
+      "type" : "page",
+      "url" : ""
+    },
+    "human-trafficking-2" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Human Trafficking",
+      "type" : "page",
+      "url" : ""
+    },
+    "hunger-free-texans" : {
+      "blurb" : "http://www.hungerfreetexans.org/",
+      "tags" : "",
+      "title" : "Hunger Free Texans",
+      "type" : "link",
+      "url" : "http://www.hungerfreetexans.org/"
+    },
+    "i-help-guide" : {
+      "blurb" : "This document includes questions you can ask patients to determine if your patient could benefit from legal advocacy.",
+      "tags" : "",
+      "title" : "I-HELP Guide",
+      "type" : "item",
+      "url" : ""
+    },
+    "identifying-patients-in-need" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Identifying Patients in Need of Resources",
+      "type" : "page",
+      "url" : ""
+    },
+    "im-still-confused-i-dont-know-what-to-tell" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "I'm still confused and I don't know what to tell my patient",
+      "type" : "item",
+      "url" : ""
+    },
+    "immunization-help-line" : {
+      "blurb" : "Texas Children's Hospital Immunization Help Line lists mobile van special events and immunization clinics in Spanish, English and Vietnamese",
+      "tags" : "",
+      "title" : "Immunization Help Line",
+      "type" : "item",
+      "url" : ""
+    },
+    "immunization-resources" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Immunization Resources",
+      "type" : "page",
+      "url" : ""
+    },
+    "immunizations-and-developmental-milestones" : {
+      "blurb" : "Helps parents keep track of immunizations and their child's development as they grow.",
+      "tags" : "",
+      "title" : "Immunizations and Developmental Milestones (birth to 6 years old)",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/Immunization%20Milestones.pdf"
+    },
+    "income-support" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Income Support",
+      "type" : "item",
+      "url" : ""
+    },
+    "insurance-options" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Insurance Options",
+      "type" : "page",
+      "url" : ""
+    },
+    "introduction" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Introduction",
+      "type" : "page",
+      "url" : ""
+    },
+    "kff" : {
+      "blurb" : "http://kff.org/",
+      "tags" : "",
+      "title" : "Kaiser Family Foundation",
+      "type" : "link",
+      "url" : "http://kff.org/"
+    },
+    "legacy-community-health-services" : {
+      "blurb" : "Affordable and comprehensive behavioral health services provided at various locations in Harris County by Legacy Community Health Services.",
+      "tags" : "",
+      "title" : "Legacy Community Health Services",
+      "type" : "item",
+      "url" : ""
+    },
+    "legal-immigration-status" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Legal Immigration Status",
+      "type" : "item",
+      "url" : ""
+    },
+    "legal-services" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Legal Services",
+      "type" : "page",
+      "url" : ""
+    },
+    "mental-and-behavioral-health" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Mental and Behavioral Health",
+      "type" : "page",
+      "url" : ""
+    },
+    "mental-health" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Mental Health",
+      "type" : "page",
+      "url" : ""
+    },
+    "mental-health-2" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Mental Health",
+      "type" : "item",
+      "url" : ""
+    },
+    "mental-health-of-america" : {
+      "blurb" : "http://www.mhahouston.org/",
+      "tags" : "",
+      "title" : "Mental Health of America",
+      "type" : "link",
+      "url" : "http://www.mhahouston.org/"
+    },
+    "mhmra" : {
+      "blurb" : "http://www.mhmraharris.org/",
+      "tags" : "",
+      "title" : "MHMRA",
+      "type" : "link",
+      "url" : "http://www.mhmraharris.org/"
+    },
+    "mhmra-applied-behavioral-analysis-skip-program" : {
+      "blurb" : "The program provides ABA services to children 3-8 with a diagnosis of autism in a 6 month model that also focuses on parent training.",
+      "tags" : "",
+      "title" : "MHMRA Applied Behavioral Analysis (ABA) SkIP Program",
+      "type" : "item",
+      "url" : ""
+    },
+    "mhmra-stars-program" : {
+      "blurb" : "The program provides therapeutic interventions for individuals with intellectual developmental disabilities or autism disorder.",
+      "tags" : "",
+      "title" : "MHMRA STARS Program",
+      "type" : "item",
+      "url" : ""
+    },
+    "mobile-immunization-clinics-providers" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Mobile Immunization Clinics/Providers",
+      "type" : "item",
+      "url" : ""
+    },
+    "obesity" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Obesity",
+      "type" : "page",
+      "url" : ""
+    },
+    "obesity-and-wellness" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Obesity and Wellness",
+      "type" : "page",
+      "url" : ""
+    },
+    "overview-of-health-insurance-options" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Overview of Health Insurance Options",
+      "type" : "item",
+      "url" : ""
+    },
+    "patient-handouts" : {
+      "blurb" : "A list of high-yield handouts on common adolescent issues for parents.",
+      "tags" : "",
+      "title" : "Patient Handouts",
+      "type" : "item",
+      "url" : ""
+    },
+    "patient-handouts-2" : {
+      "blurb" : "A list of educational handouts explaining autism spectrum disorder and specific symptoms associated with autism.",
+      "tags" : "",
+      "title" : "Patient Handouts",
+      "type" : "item",
+      "url" : ""
+    },
+    "patient-handouts-dental" : {
+      "blurb" : "A list of educational handouts on common oral health topics for children and adults.",
+      "tags" : "",
+      "title" : "Patient Handouts",
+      "type" : "item",
+      "url" : ""
+    },
+    "people-with-disabilities" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "People with Disabilities",
+      "type" : "page",
+      "url" : ""
+    },
+    "personal-and-family-stability" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Personal and Family Stability",
+      "type" : "item",
+      "url" : ""
+    },
+    "poison-control" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Poison Control",
+      "type" : "page",
+      "url" : ""
+    },
+    "polaris-project" : {
+      "blurb" : "http://www.polarisproject.org/",
+      "tags" : "",
+      "title" : "Polaris Project",
+      "type" : "link",
+      "url" : "http://www.polarisproject.org/"
+    },
+    "poverty" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Poverty",
+      "type" : "page",
+      "url" : ""
+    },
+    "prenatal-and-postnatal-care" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Prenatal and Postnatal Care",
+      "type" : "page",
+      "url" : ""
+    },
+    "prescription-drug-and-immunization-resources" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Prescription Drug and Immunization Resources",
+      "type" : "page",
+      "url" : ""
+    },
+    "prescription-drug-resources" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Prescription Drug Resources",
+      "type" : "page",
+      "url" : ""
+    },
+    "public-insurance" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Public Insurance",
+      "type" : "item",
+      "url" : ""
+    },
+    "radar-assessment-for-domestic-violence" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "RADAR Assessment for Domestic Violence",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/RADAR%20assessment.pdf"
+    },
+    "recommended-immunizations" : {
+      "blurb" : "Provides parents information on recommended immunizations for children",
+      "tags" : "",
+      "title" : "Recommended Immunizations and Vaccine-Preventable Diseases",
+      "type" : "item",
+      "url" : ""
+    },
+    "reduced-cost-prescription-drugs" : {
+      "blurb" : "For the uninsured or for those with co-pays that are too high",
+      "tags" : "",
+      "title" : "Reduced Cost Prescription Drugs",
+      "type" : "item",
+      "url" : ""
+    },
+    "resources-for-women" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Resources for Women",
+      "type" : "item",
+      "url" : ""
+    },
+    "safety-net-clinics" : {
+      "blurb" : "Safety Net Clinics have different eligibility requirements.",
+      "tags" : "",
+      "title" : "Safety Net Clinics",
+      "type" : "item",
+      "url" : ""
+    },
+    "screening-for-victims-of-human-trafficking" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Screening for Victims of Human Trafficking",
+      "type" : "item",
+      "url" : ""
+    },
+    "senior-care" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Senior Care",
+      "type" : "page",
+      "url" : ""
+    },
+    "sigecaps-assessment-for-depression" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "SIGECAPS Assessment for Depression",
+      "type" : "pdf",
+      "url" : "http://dfcguide.org/docs/SIGECAPS%20assessment.pdf"
+    },
+    "state-of-obesity" : {
+      "blurb" : "http://stateofobesity.org/states/tx",
+      "tags" : "",
+      "title" : "State of Obesity",
+      "type" : "link",
+      "url" : "http://stateofobesity.org/states/tx"
+    },
+    "substance-abuse" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Substance Abuse",
+      "type" : "page",
+      "url" : ""
+    },
+    "texas-2-1-1" : {
+      "blurb" : "Searchable statewide list of resources.",
+      "tags" : "",
+      "title" : "Texas 2-1-1",
+      "type" : "item",
+      "url" : ""
+    },
+    "texas-hunger-institute" : {
+      "blurb" : "http://www.baylor.edu/texashunger/index.php?id=99647",
+      "tags" : "",
+      "title" : "Texas Hunger Institute",
+      "type" : "link",
+      "url" : "http://www.baylor.edu/texashunger/index.php?id=99647"
+    },
+    "the-immunization-partnership" : {
+      "blurb" : "Nonprofit organization that advocates evidence-based policy that supports high immunization rates and encourages use.",
+      "tags" : "",
+      "title" : "The Immunization Partnership",
+      "type" : "item",
+      "url" : ""
+    },
+    "tooth-wisdom" : {
+      "blurb" : "List of resources for oral health care for Texans (including many for Houstonians)",
+      "tags" : "",
+      "title" : "Tooth Wisdom",
+      "type" : "link",
+      "url" : "http://www.toothwisdom.org/care/state/texas/dental"
+    },
+    "transportation" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Transportation",
+      "type" : "item",
+      "url" : ""
+    },
+    "transportation-2" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Transportation",
+      "type" : "page",
+      "url" : ""
+    },
+    "united-against-human-trafficking" : {
+      "blurb" : "http://www.uaht.org/",
+      "tags" : "",
+      "title" : "United Against Human Trafficking",
+      "type" : "link",
+      "url" : "http://www.uaht.org/"
+    },
+    "us-department-of-health" : {
+      "blurb" : "http://www.hhs.gov/ash/oah/adolescent-health-topics/reproductive-health/states/tx.html",
+      "tags" : "",
+      "title" : "US Department fo Health and Human Services",
+      "type" : "link",
+      "url" : "http://www.hhs.gov/ash/oah/adolescent-health-topics/reproductive-health/states/tx.html"
+    },
+    "vision-services" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Vision Services",
+      "type" : "page",
+      "url" : ""
+    },
+    "we-care-project" : {
+      "blurb" : "Evidence-based 10-question survey for screening about the social determinants of health in the outpatient setting.",
+      "tags" : "",
+      "title" : "WE CARE Project",
+      "type" : "item",
+      "url" : ""
+    },
+    "womens-health" : {
+      "blurb" : "",
+      "tags" : "",
+      "title" : "Women's Health",
+      "type" : "page",
+      "url" : ""
+    }
+  },
+  "pages" : {
+    "adolescent-issues" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "covenant-house", "us-department-of-health" ]
+      } ],
+      "references" : [ "Children at Risk. <em>Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children</em>. Children at Risk, 2012.", "Kann, Laura, et al. Youth Risk Behavior Surveillance – United States, 2013. MMWR 2014; 63 (No. 4):1-168." ],
+      "stats" : [ "In 2010, Texas was ranked 4th in the nation for the highest number of teen births with 52.2 births per 1,000 teens, and 1st in the nation for repeat teen births. More than 20% of the teen births reported statewide were repeat teen births<sup>1</sup>", "In 2010, Harris County reported a similar teen birth rate, 52.1 births per 1,000 15 to 19 year olds and a total of more than 7,500 teen births. Harris County accounted for 15% of all teen births in the State of Texas<sup>1</sup>", "The teen birth rate in Harris County has been on the decline during the past several years, however Harris County rates, like the Texas teen birth rate, are still much higher than the average for the U.S.<sup>1</sup>", "Studies show that abstinence-only programs do not significantly delay sexual initiation or reduce STI rates among teens<sup>1</sup>", "When comparing Texas to states with lower teen birth and STI rates, one major difference is Texas’ lack of sex education programs that teach medically accurate information in addition to abstinence<sup>1</sup>", "Based on 2013 survey data, 15.7% of students between 9-12th grade had smoked cigarettes on at least 1 day during the past 30 days and 34.9% had used alcohol in the past month<sup>2</sup>" ],
+      "title" : "Adolescent Issues"
+    },
+    "adolescent-issues-2" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Community Resources",
+        "links" : [ "child-protective-services-in-harris-county", "community-youth-services", "covenant-house-crisis-line", "texas-youth-and-runaway-hotline", "crisis-intervention-of-houston" ]
+      }, {
+        "label" : "Patient Education",
+        "links" : [ "patient-handouts" ]
+      } ],
+      "references" : [ "Children at Risk. <em>Community Health Needs Assessment for Texas Children's Hospital 2013</em>. Children at Risk, 2013. Web. 29 Aug. 2014.", "Martin, Joyce A., et al, “Births: Final Data for 2012.” <em>National Vital Statistics Reports</em> Vol. 62 No. 9. Hyattsville, MD: National Center for Health Statistics. 2013. Web. 29 Aug 2014.", "<em>FastStats: Adolescent Health</em>. Centers for Disease Control and Prevention. National Center for Health Statistics, 7 July 2014. Web. 29 Aug 2014.", "Centers for Disease Control and Prevention. <em>1991-2013 High School Youth Risk Behavior Survey Data</em>. Available at: http://nccd.cdc.gov/youthonline/. Accessed on 29 Aug 2014." ],
+      "stats" : [ "In 2012, Harris County reported a teen birth rate of 42.7 births per 1,000 for 15-19 year olds1. This is compared to 44.4 births per 1,000 for 15-19 year olds in all of Texas, and 29.4 for the US teen birth rate<sup>2</sup>", "Based on 2012 US survey data, 6.6% of adolescents 12-17 years of age had smoked cigarettes in the past month and 12.9% had used alcohol in the past month<sup>3</sup>", "In a 2013 survey of Houston ISD high school students, 21.5% of students reported not having exercised once for at least 60 minutes in the week leading up to the survey<sup>4</sup>", "In a 2013 survey of Houston ISD high school students, 31.4% of youth reported being sexually active, with 24.2% reporting not using any method to prevent pregnancy<sup>4</sup>" ],
+      "title" : "Adolescent Issues"
+    },
+    "autism-services" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Community Resources",
+        "links" : [ "harris-county-intellectual-disability-and-autism-services", "mhmra-stars-program", "mhmra-applied-behavioral-analysis-skip-program", "legacy-community-health-services", "harris-county-autism-resources" ]
+      }, {
+        "label" : "Support Groups",
+        "links" : [ "houston-area-autism-support-groups" ]
+      }, {
+        "label" : "Patient Education",
+        "links" : [ "patient-handouts-2" ]
+      } ],
+      "references" : [ "<em>Autism Spectrum Disorders (ASD): Data & Statistics</em>. Centers for Disease Control and Prevention. National Center for Birth Defects and Developmental Disabilities, 24 March 2014. Web. 29 Aug 2014." ],
+      "stats" : [ "About 1 in 68 children has been identified with an autism spectrum disorder (ASD) according to estimates from CDC's Autism and Developmental Disabilities Monitoring (ADDM) Network<sup>1</sup>", "ASD is almost 5 times more common in boys than in girls<sup>1</sup>", "On average, medical expenditures for individuals with an ASD were 4.1–6.2 times greater than for those without an ASD<sup>1</sup>", "Children can be reliable diagnosed with autism as early as by age 2, although most are not diagnosed until after age 4<sup>1</sup>", "46% of ASD children have average to above average intellectual ability<sup>1</sup>" ],
+      "title" : "Autism Services"
+    },
+    "care-for-the-uninsured" : {
+      "description" : "So your patient does not have health insurance... there are still options for your patient to get care in Houston! Options include Federally Qualified Health Centers, free or charity clinics, the Harris Health System (for residents of Harris County) and more!",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "federally-qualified-health-centers", "safety-net-clinics", "harris-health-system", "clinic-options-specifically-for-kids", "resources-for-women", "gateway-to-care-patient-navigator-program", "application-assistance", "harris-county-nurse-health-hotline" ]
+      } ],
+      "title" : "Care for the Uninsured"
+    },
+    "community-resources" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "texas-2-1-1", "adolescent-issues-2", "autism-services", "dental-services", "domestic-violence-2", "early-childhood-education-and-parenting-support", "financial-houston-employment-assistance-programs", "food-insecurity-3", "health-maintenance-for-adults", "homeless", "hospice-and-palliative-care", "human-trafficking-2", "legal-services", "mental-and-behavioral-health", "obesity-and-wellness", "people-with-disabilities", "poison-control", "prenatal-and-postnatal-care", "senior-care", "substance-abuse", "transportation-2", "vision-services", "womens-health" ]
+      } ],
+      "title" : "Community Resources"
+    },
+    "dental-services" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Community Resources",
+        "links" : [ "harris-county-dental-clinics", "harris-county-dental-clinics-brief-handout", "greater-houston-dental-society", "gateway-to-care-list-of-dental-services", "tooth-wisdom" ]
+      }, {
+        "label" : "General Resources for Physicians and Patients",
+        "links" : [ "general-online-resources-dental" ]
+      }, {
+        "label" : "Patient Education",
+        "links" : [ "patient-handouts-dental" ]
+      } ],
+      "references" : [ "Children at Risk. <em>Community Health Needs Assessment for Texas Children's Hospital 2013</em>. Children at Risk, 2013. Web. 29 Aug. 2014.", "<em>FastStats: Oral and Dental Health</em>. Centers for Disease Control and Prevention. National Center for Health Statistics, 14 May 2014. Web. 1 Sept 2014." ],
+      "stats" : [ "27.3% of children in Harris County did not have dental insurance in 2010<sup>1</sup>", "15.3% of parents delayed dental care for their children due to cost or lack of insurance<sup>1</sup>", "82.3% of children ages 2-17 in the US had a dental visit in the last year, compared to 61.6% of adults in the US<sup>2</sup>", "Over 40% of poor adults (20 years and older) have at least one untreated decayed tooth compared to 16% of non-poor adults<sup>2</sup>" ],
+      "title" : "Dental Services"
+    },
+    "domestic-violence" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "houston-area-womens-shelter" ]
+      } ],
+      "references" : [ "<em>Facts and Statistics.</em> Texas Council on Family Violence. Texas Health and Human Services Commission, the Texas Council on Family Violence, and the Texas Department of Public Safety, n.d. Web. 17 Sept 2014.", "<em>Chapter 5: Family Violence.</em> 2013 Crime in Texas. Texas Department of Public Safety, 2013. Web. 17 Sept 2014.", "Breiding MJ, Smith SG, Basile KC, Walters ML, Chen J, Merrick MT. Prevalence and Characteristics of Sexual Violence, Stalking, and Intimate Partner Violence Victimization—National Intimate Partner and Sexual Violence Survey, United States, 2011. MMWR 2014; 63(SS-8): 1-18." ],
+      "stats" : [ "In 2010, Texas was ranked 4th in the nation for the highest number of teen births with 52.2 births per 1,000 teens, and 1st in the nation for repeat teen births. More than 20% of the teen births reported statewide were repeat teen births<sup>1</sup>", "In 2012, there were a reported 26.2% of Texas adults that were denied shelter due to lack of space<sup>1</sup>", "In 2012, a reported 114 women were killed as a consequence of domestic violence", "188,992 family violence incidents were reported in Texas in 2012, which is a 6% increase when compared to 2011<sup>1</sup>", "In 2012, there were 11,994 adults and 14,534 children sheltered in Texas<sup>1</sup>", "The largest percent of family violence reports was between other family members, the 2nd most commonly reported relationship among offenders and victims was married spouses<sup>2</sup>", "1 in 4 women have been the victim of severe physical violence by an intimate partner, while 1 in 7 men have experienced the same<sup>3</sup>", "Nearly 1 in 5 women (19.3%) and 1 in 59 men (1.7%) have been raped in their lifetime<sup>3</sup>", "More than 1 in 4 women and more than 1 in 10 men who experienced rape, stalking or physical violence by an intimate partner reported significant short or long term impacts, such as post-traumatic stress disorder symptoms or injury.", "Men and women who experienced these forms of violence were more likely to report frequent headaches, chronic pain, difficulty sleeping, activity limitations, poor physical health, and poor mental health than men and women who did not experience these forms of violence<sup>3</sup>" ],
+      "title" : "Domestic Violence"
+    },
+    "education" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "children-at-risk", "collaborative-for-children", "early-matters" ]
+      } ],
+      "references" : [ "Children at Risk. <em>Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children</em>. Children at Risk, 2012." ],
+      "stats" : [ "Quality early education increases school readiness and contributes to better student academic outcomes, especially in children of low socioeconomic status<sup>1</sup>", "Texas Pre-K programs have lost $223 million in recent education budget cuts and as a result many full day Pre-K programs have been reduced to half-day programs or eliminated entirely<sup>1</sup>", "The number of national accredited child care providers operating in Harris County has decreased over 70% since 2006<sup>1</sup>", "51.8% of Harris County students were identified as at risk of dropping out in 2011<sup>1</sup>", "The 4-year graduation rate for the 2006-2007 first time freshman cohort was 68.9% in Harris County, while the national high school graduation rate is 75.5%<sup>1</sup>", "High school dropouts face limited earning potential, a higher likelihood of committing crime, and a shorter life span<sup>1</sup>", "Research shows that the road to dropping out can begin as early as the 3rd grade, with an especially strong link between 3rd grade reading skills and graduation<sup>1</sup>", "In 2009, the unemployment rate for dropouts was 15.4% compared to 9.4% for high school graduates and 4.7% for those with a Bachelor’s degree<sup>1</sup>", "In 2011, it was reported that 65.4% of students enrolled in Harris County public schools were economically disadvantaged<sup>1</sup>", "While 54% of Greater Houston students will enter college, only about 19% of Texas students will complete college<sup>1</sup>" ],
+      "title" : "Education"
+    },
+    "evidence-based-questions" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "food-insecurity-2", "income-support", "housing-utilities-and-health", "education-and-child-care", "mental-health-2", "personal-and-family-stability", "legal-immigration-status", "transportation" ]
+      } ],
+      "title" : "Evidence-Based Questions"
+    },
+    "food-insecurity" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "children-at-risk", "hunger-free-texans", "texas-hunger-institute", "houston-food-bank" ]
+      } ],
+      "references" : [ "Children at Risk. Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children. Children at Risk, 2012.", "<em>Child Hunger: Fact Sheets</em> Houston Food Bank. Houston Food Bank, n.d. Web. 12 Sept 2014." ],
+      "stats" : [ "Of Texas households, 18.7% are food insecure and live with the risk of running out of food on a daily basis<sup>1</sup>", "In Harris County, 25.5% of children live in food insecure households<sup>1</sup>", "47% of Houston Food Bank clients are under 18 years of age<sup>2</sup>", "Food insecurity is linked to poor performance in school, reduced attention in class, behavioral issues, increased school absences, a higher risk of obesity, and more suicidal or depressive tendencies among children<sup>1</sup>", "21.6% of all children are food insecure in the U.S.; 27.1% of children in Texas are food insecure<sup>1</sup>", "Minorities are more at risk; of all children receiving food stamps in Harris County in 2011, 56.62% were Latino and 28.63% were Black<sup>1</sup>", "43% of these children in Harris County were under the age of five<sup>1</sup>", "On an average day in 2010-2011 school year, 372,425 students in Harris County were eligible for a free or reduced price breakfast but did not receive one<sup>1</sup>" ],
+      "title" : "Food Insecurity"
+    },
+    "health-care" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "cppp", "kaiser-family-foundation" ]
+      } ],
+      "references" : [ "Children at Risk. Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children. Children at Risk, 2012.", "<em>Texas State Health Plan, 2013-2014 Update</em>. Texas Department of State Health Services. Statewide Health Coordinating Council, n.d. Web. 12 Sept 2014." ],
+      "stats" : [ "In 2009, 19.5% of Harris County children were uninsured 127% of Harris County children live in poverty and 26% of Texas children do<sup>1</sup>", "In 2009, Texas was 49th in the nation for uninsured children with 16% of children not receiving any type of health coverage 186% of low income children and 53% of poor children have parents who never graduated from high school<sup>1</sup>", "In 2010, only slightly more than half of pregnant women in Harris County received early prenatal care (starting medical care in the first trimester of pregnancy and continuing care until delivery)<sup>1</sup>", "8.8% of babies born in Harris County in 2010 were classified as low birth weight, up from 7.4% in 2000<sup>1</sup>", "About 61% of children served at school based clinics do not have any type of health care coverage and the remaining 39% are children who would not obtain health care due to transportation issues, parents who cannot afford to miss work for a doctor visit, high private insurance deductibles, or simply lack of parental involvement<sup>1</sup>", "Texas currently ranks 42nd in the ratio of physicians to population (68 per 100,000 compared with U.S. average of 81 per 100,000)", "3 out of 4 Texas counties are designated as Health Professions Shortage Areas" ],
+      "title" : "Health Care"
+    },
+    "home" : {
+      "description" : "Welcome to the DFC Guide.",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "introduction", "identifying-patients-in-need", "insurance-options", "care-for-the-uninsured", "prescription-drug-and-immunization-resources", "community-resources", "how-to-incorporate-advocacy" ]
+      } ],
+      "title" : "Home"
+    },
+    "human-trafficking" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "children-at-risk", "polaris-project", "united-against-human-trafficking" ]
+      } ],
+      "references" : [ "Children at Risk. <em>Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children</em>. Children at Risk, 2012.", "Children at Risk. <em>Growing Up in Houston 2010-2012, Assessing the Quality of Life of Our Children</em>. Children at Risk, 2010." ],
+      "stats" : [ "In 2010, Texas was ranked 4th in the nation for the highest number of teen births with 52.2 births per 1,000 teens, and 1st in the nation for repeat teen births. More than 20% of the teen births reported statewide were repeat teen births<sup>1</sup>", "While international trafficking is a big problem in the U.S., the number of American child victims trafficked with in the U.S. far surpasses the number of victims brought into the country each year<sup>1</sup>", "Texas is a hub of human trafficking. The U.S. Department of Justice identified the I-10 corridor as the #1 human trafficking route in the U.S., with as many as 1 in 4 victims in the U.S. passing through Texas<sup>1</sup>", "In 2011, Texas was responsible for the 2nd highest number of calls to the National Human Trafficking Hotline<sup>1</sup>", "Houston is a hub for all forms of human trafficking due to its proximity to the border, national airports and seaports and diverse population<sup>1</sup>", "Domestic minor sex trafficking is especially prevalent, and shows that as many as 300,000 U.S. children are at risk for sexual exploitation<sup>1</sup>", "76% of all confirmed human trafficking incidents involved forced prostitution and child sex trafficking<sup>2</sup>", "An estimated 1 out of every 3 children that run away is lured into sex trafficking within 48 hours of leaving home<sup>2</sup>" ],
+      "title" : "Human Trafficking"
+    },
+    "identifying-patients-in-need" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Screening for Social Needs",
+        "links" : [ "we-care-project", "i-help-guide", "caring-with-compassion", "evidence-based-questions" ]
+      }, {
+        "label" : "Education",
+        "links" : [ "education-and-how-to-screen-patients" ]
+      }, {
+        "label" : "Assessment Tools",
+        "links" : [ "heads-assessment", "bathe-assessment", "sigecaps-assessment-for-depression", "radar-assessment-for-domestic-violence", "screening-for-victims-of-human-trafficking", "crafft-assessment-for-substance-abuse", "cage-assessment", "ethnic-assessment-for-culturally-competent", "childhood-hunger-screening" ]
+      } ],
+      "title" : "Identifying Patients in Need of Resources"
+    },
+    "immunization-resources" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Immunization Resources",
+        "links" : [ "immunization-help-line", "mobile-immunization-clinics-providers", "the-immunization-partnership" ]
+      }, {
+        "label" : "General Educational Resources",
+        "links" : [ "immunizations-and-developmental-milestones", "recommended-immunizations", "cdc-recommended-vaccine-schedule" ]
+      } ],
+      "title" : "Immunization Resources"
+    },
+    "insurance-options" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "overview-of-health-insurance-options", "enrolling-in-the-health-insurance-marketplace", "enrolling-in-texas-medicaid-or-texas-chip", "enrolling-in-medicare", "harris-health-financial-assistance-program", "enrolling-in-the-texas-womens-health-program", "application-assistance", "im-still-confused-i-dont-know-what-to-tell" ]
+      } ],
+      "title" : "Insurance Options"
+    },
+    "introduction" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "poverty", "food-insecurity", "health-care", "obesity", "adolescent-issues", "mental-health", "domestic-violence", "human-trafficking", "education" ]
+      } ],
+      "title" : "Introduction"
+    },
+    "mental-health" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "mhmra", "mental-health-of-america" ]
+      } ],
+      "references" : [ "<em>U.S. Adult Mental Illness Surveillance Report.</em> Centers for Disease Control and Prevention. Office of the Associate Director for Communication, Sept 2011. Web. 15 Sept 2014.", "Children at Risk. Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children. Children at Risk, 2012." ],
+      "stats" : [ "In 2010, Texas was ranked 4th in the nation for the highest number of teen births with 52.2 births per 1,000 teens, and 1st in the nation for repeat teen births. More than 20% of the teen births reported statewide were repeat teen births<sup>1</sup>", "Mental illness is associated with lower use of medical care, reduced adherence to treatment therapies for chronic diseases, and higher risks of adverse health outcomes<sup>1</sup>", "Texas ranks last nationally in per capita mental health spending, at $38.38<sup>2</sup>", "Many families in Houston experience difficulty in accessing mental health services for their children, as 14,000 children in Houston cannot access mental health services<sup>2</sup>", "Alcohol and substance abuse continues to affect many children in Texas; nearly 1 in 4 Texas teens are frequent binge drinkers<sup>2</sup>", "Only a quarter of the children needing public mental health services in Harris County have access<sup>2</sup>", "Over 95% of families accessing MHMRA fell below Federal Poverty Level. Many of these families rely on public assistance to facilitate payment; 35.1% of children on MHMRA’s caseload in 2011 used Medicaid or CHIP, while an additional 25.8% were uninsured<sup>2</sup>", "Special education enrollment declined slightly during the 2010-2011 school year, continuing a decade-long trend for Harris County. Learning disabilities were the leading primary impairment, representing 39.6% of students, while speech impairment, autism, and intellectual disability comprised 18.1%, 9.8%, and 9.3% of students, respectively<sup>2</sup>", "Mental illness and substance abuse are oftentimes contributing factors to teen suicide, the third-leading cause of death among 15-24 year olds<sup>2</sup>", "Among Texas high school students, 29.2% reported feeling sad or hopeless for at least 2 weeks in a row, 15.8% seriously considered suicide, 13.2% made a plan, and 10.8% of students attempted to kill themselves<sup>2</sup>" ],
+      "title" : "Mental Health"
+    },
+    "obesity" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "brighter-bites", "healthy-living-matters", "state-of-obesity" ]
+      } ],
+      "references" : [ "Children at Risk. Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children. Children at Risk, 2012.", "<em>Physical Health.</em> Children at Risk. Children at Risk, n.d. Web. 12 Sept 2014.", "<em>Houston/Harris County Community Transformation Initiative Health Equity Assessment 2012.</em> The City of Houston. Houston Department of Health and Human Services, 2012. Web. 15 Sept 2014.", "Ogden, CL, Carroll MD, Kit BK, Flegal KM. Prevalence of Obesity in the United States, 2009-2010. NCHS Data Brief, No 82. Hyattsville, MD: National Center for Health Statistics. 2012.", "<em>Overweight and Obesity: Adult Obesity Facts.</em> Centers for Disease Control and Prevention. National Center for Chronic Disease Prevention and Health Promotion, 9 Sept 2014. Web. 12 Sept 2014." ],
+      "stats" : [ "Texas ranked 2nd highest in nation after California with 1,751,000 children living in poverty<sup>1</sup>", "The CDC lists two main causes for the obesity epidemic: an increased intake of energy-dense foods that are high in fat, salt, and sugars but low in vitamins, minerals and other micronutrients; and a decrease in physical activity due to the increasingly sedentary nature of many forms of work, changing modes of transportation, and increasing urbanization<sup>1</sup>", "Texas is ranked 6th in the nation for childhood obesity<sup>2</sup>", "23% of students surveyed said that they drink more than 2 sodas per day, while 22% reported eating fast food three or more times per week<sup>1</sup>", "77% of students get fewer than 60 minutes of exercise per day, compared with the 72% who reported spending 2 or more hours in front of a screen on a daily basis<sup>1</sup>", "Texas teens drink more soda, watch more television, and have fewer family meals than the national average by around 3% in each category<sup>1</sup>", "Latino children have been the primary targets of obesity epidemic; in 2007 it was revealed that 46% of Latino children in Texas were obese, as opposed to 26% and 23% for Black and White children, respectively<sup>1</sup>", "Food deserts are neighborhoods that lack grocery store or healthy produce available for purchase<sup>1</sup>", "In the Houston area, the ratio of supermarkets to people is 1:12,000, much higher than the national ratio of 1:8,600<sup>1</sup>", "Within Houston, areas as large as 10 miles have been identified as containing only a single food source: gas stations that sell tobacco, alcohol, and fatty snacks<sup>1</sup>", "Studies show that students who eat breakfast at school are more likely to meet or exceed dietary vitamin and mineral recommendations. However, the free school breakfast program is underutilized; for every 100 children who eat free or reduced-price lunch, just 56 eat free or reduced-priced breakfast<sup>1</sup>", "In Harris County, 29% of adults are obese and 23% are physically inactive<sup>3</sup>", "In 2009-2010, more than a third (35.7%) of U.S. adults and 17% of U.S. children and adolescents were obese and adults aged 60 and over were more likely to be obese than younger adults<sup>4</sup>", "The estimated annual medical cost of obesity in the U.S. was $147 billion in 2008; the medical costs for people who are obese were $1,429 higher than those of normal weight<sup>5</sup>", "Among non-Hispanic black and Mexican-American men, those with higher incomes are more likely to be obese than those with low incomes<sup>5</sup>", "Higher income women are less likely to be obese than low income women<sup>5</sup>", "There is no significant relationship between obesity and education among men. Among women, however, there is a trend – those with college degrees are less likely to be obese compared with less educated women<sup>5</sup>" ],
+      "title" : "Obesity"
+    },
+    "poverty" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "Helpful Links",
+        "links" : [ "cppp", "for-a-better-texas" ]
+      } ],
+      "references" : [ "Children at Risk. Growing Up in Houston 2012-2014, Assessing the Quality of Life of Our Children. Children at Risk, 2012.", "<em>Child Poverty</em>. National Center for Children in Poverty. Columbia University Mailman School of Public Health, n.d. Web. 12 Sept 2014.", "<em>Poverty Rate by Race/Ethnicity</em>. The Kaiser Family Foundation. The Henry J. Kaiser Foundation, n.d. Web. 12 Sept. 2014.", "<em>Poverty: Highlights</em>. United States Department of Census Bureau. U.S. Department of Commerce, n.d. Web. 12 Sept 2014." ],
+      "stats" : [ "Texas ranked 2nd highest in the nation after California with 1,751,000 children living in poverty<sup>1</sup>", "27% of Harris County children and 26% of Texas children live in poverty<sup>1</sup>", "Nearly half of the children in Texas live at 200% or below the federal poverty rate, while the national average is 44%<sup>1</sup>", "86% of low income children and 53% of poor children have parents who never graduated from high school<sup>1</sup>", "In the 2011-2012 school year, school districts in Greater Houston area identified 12,512 homeless youth, or 1.3% of public school population<sup>1</sup>", "43.6% of infants and children under 4 years of age received WIC assistance<sup>1</sup>", "The 2013 Federal Poverty Level (FPL) for a family of 4 equals $23,550. On average, it is estimated that it takes twice that amount to provide the most basic needs<sup>2</sup>", "In 2011-2012, the Kaiser Family Foundation reported 23% of Texas adults in poverty<sup>3</sup>", "In 2012, 46.5 million people (15%) in the U.S. were in poverty<sup>4</sup>" ],
+      "title" : "Poverty"
+    },
+    "prescription-drug-and-immunization-resources" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "immunization-resources", "prescription-drug-resources" ]
+      } ],
+      "title" : "Prescription Drug and Immunization Resources"
+    },
+    "prescription-drug-resources" : {
+      "description" : "",
+      "lists" : [ {
+        "label" : "",
+        "links" : [ "public-insurance", "reduced-cost-prescription-drugs" ]
+      } ],
+      "title" : "Prescription Drug Resources"
+    }
+  }
+}
