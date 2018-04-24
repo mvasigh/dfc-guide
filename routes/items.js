@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.redirect(`/item/${item._id}`);
+      res.redirect(`/items/${item._id}`);
     }
   });
 });
@@ -68,7 +68,7 @@ router.put('/:id', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.redirect(`/item/${req.params.id}`);
+      res.redirect(`/items/${req.params.id}`);
     }
   });
 });
@@ -79,7 +79,7 @@ router.delete('/:id', (req, res) => {
     if (err) {
       console.log(err);
     }
-    res.redirect('/item');
+    res.redirect('/items');
   });
 });
 

@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const seedDatabase = require('./seeds');
 const methodOverride = require('method-override');
 const Item = require('./models/item');
-const itemRoutes = require('./routes/items');
+const itemsRoutes = require('./routes/items');
 
 // ==============
 // APP CONFIG
@@ -15,13 +15,17 @@ const app = express();
 app.engine('ejs', engine);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 app.use(methodOverride('_method'));
 
 // ===============
 // ROUTES
 // ===============
-app.use('/item', itemRoutes);
+app.use('/items', itemsRoutes);
 
 app.get('/', (req, res) => {
   res.redirect('/home');
@@ -30,9 +34,13 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
   Item.find({}, (err, items) => {
     if (err) {
-      res.render('home', { items: [] });
+      res.render('home', {
+        items: []
+      });
     } else {
-      res.render('home', { items: items });
+      res.render('home', {
+        items: items
+      });
     }
   });
 });

@@ -11,7 +11,7 @@
                 </h2>
                 <div class="columns is-centered">
                     <div class="column is-half is-narrow">
-                        <form action="/item" method="GET">
+                        <form action="/items" method="GET">
                             <div class="field">
                                 <div class="control has-icons-left">
                                     <input type="text" class="input is-medium is-rounded" placeholder="Search the Guide..." name="search">
@@ -95,7 +95,7 @@
                                 <p class="card-header-title">
                                     <%= item.title %>
                                 </p>
-                                <a href="item/<%= item._id %>" class="card-header-icon">
+                                <a href="items/<%= item._id %>" class="card-header-icon">
                                     <span class="icon">
                                         <i class="fas fa-angle-right"></i>
                                     </span>
