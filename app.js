@@ -14,6 +14,7 @@ mongoose.connect('mongodb://localhost/dfc_guide');
 const app = express();
 app.engine('ejs', engine);
 app.set('views', __dirname + '/views');
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(
   bodyParser.urlencoded({

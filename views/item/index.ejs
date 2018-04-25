@@ -2,19 +2,42 @@
 
   <section class="section">
     <div class="container">
-      <% if (search.length > 0) { %>
-        <h2 class="subtitle">Here are your search results for "<%= search %>"</h2>
-        <% } %>
+      <div class="columns">
+        <div class="column is-one-third">
+          <% include ../partials/category_menu %>
+        </div>
+        <div class="column is-two-thirds dfc-item-list">
+
+          <% if (search.length > 0) { %>
+            <h2 class="subtitle">
+              Here are your search results for "
+              <%= search %>"</h2>
+            <% } %>
           <% items.forEach(item => { %>
-            <div class="box">
-              <h1 class="title">
-                <%= item.title %>
-              </h1>
-              <div class="content">
-                <%= item.description %>
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <a href="/items/<%= item._id %>" class="has-text-dark dfc-item-title"><%= item.title %></a>
+                </p>
+                <a href="/items/<%= item._id %>" class="card-header-icon">
+                  <span class="icon">
+                    <i class="fas fa-share-alt" aria-hidden="true"></i>
+                  </span>
+                </a>
+                <a href="/items/<%= item._id %>" class="card-header-icon">
+                <span class="icon">
+                  <i class="fas fa-edit" aria-hidden="true"></i>
+                </span>
+                </a>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <%= item.description %>                
+                </div>
               </div>
-              <a class="button is-link" href="/item/<%= item.id %>">View Resource</a>
             </div>
-            <% }) %>
+          <% }) %>
+        </div>
+      </div>
     </div>
   </section>
