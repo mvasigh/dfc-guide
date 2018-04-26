@@ -6,6 +6,7 @@ const seedDB = require('./seeds');
 const methodOverride = require('method-override');
 const Item = require('./models/item');
 const itemsRoutes = require('./routes/items');
+const indexRoutes = require('./routes/index');
 
 // ==============
 // APP CONFIG
@@ -29,24 +30,7 @@ seedDB();
 // ROUTES
 // ===============
 app.use('/items', itemsRoutes);
-
-app.get('/', (req, res) => {
-  res.redirect('/home');
-});
-
-app.get('/home', (req, res) => {
-  Item.find({}, (err, items) => {
-    if (err) {
-      res.render('home', {
-        items: []
-      });
-    } else {
-      res.render('home', {
-        items: items
-      });
-    }
-  });
-});
+app.use('/', indexRoutes);
 
 app.listen(3000, () => {
   console.log('Server is running...');
