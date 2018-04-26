@@ -29,7 +29,9 @@ router.get('/new', (req, res) => {
 
 // CREATE - create a new item in db
 router.post('/', (req, res) => {
-  console.log(req.body);
+  req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
+
+  console.log(req.body.item);
   Item.create(req.body.item, (err, item) => {
     if (err) {
       console.log(err);
@@ -84,7 +86,7 @@ router.delete('/:id', (req, res) => {
 });
 
 const fuseOptions = {
-  keys: ['title'],
+  keys: ['title', 'tags'],
   minMatchCharLength: 1,
   shouldSort: true
 };
