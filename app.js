@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const engine = require('ejs-mate');
 const bodyParser = require('body-parser');
-const seedDatabase = require('./seeds');
+const seedDB = require('./seeds');
 const methodOverride = require('method-override');
 const Item = require('./models/item');
 const itemsRoutes = require('./routes/items');
@@ -22,6 +22,8 @@ app.use(
   })
 );
 app.use(methodOverride('_method'));
+
+seedDB();
 
 // ===============
 // ROUTES

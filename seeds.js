@@ -2,18 +2,6 @@ const mongoose = require('mongoose');
 const Item = require('./models/item');
 const Category = require('./models/category');
 
-const categorySeeds = [
-  {
-    name: 'Autism Services'
-  },
-  {
-    name: 'Low-cost'
-  },
-  {
-    name: 'Spanish'
-  }
-];
-
 const itemSeeds = [
   {
     title: 'Harris County Intellectual Disability and Autism Services',
@@ -43,3 +31,32 @@ const itemSeeds = [
       'Aenean et nulla quis libero suscipit fringilla non non odio. Integer interdum maximus viverra. Suspendisse potenti. Vivamus est sapien, blandit eu tincidunt quis, mattis sed augue. Pellentesque quis ligula ornare, pretium turpis id, tempor urna. Pellentesque viverra, nulla quis vestibulum auctor, lorem elit viverra ante, sed consequat mauris libero malesuada purus. Integer tincidunt odio at fermentum dapibus. Vivamus ac velit eget urna posuere fringilla. Nunc hendrerit nulla neque, sed euismod nibh commodo eu. In hac habitasse platea dictumst. Nam risus justo, eleifend ac fermentum ut, convallis imperdiet nibh.'
   }
 ];
+
+function seedDB() {
+  Item.remove({}, err => {
+    if (err) {
+      console.log(err);
+    } else {
+      itemSeeds.forEach(seed => {
+        Item.create(seed, (err, item) => {
+          if (err) {
+            console.log(err);
+          } else {
+            Category.update(
+              {
+                name: 'Sample Category'
+              },
+              {
+                $push: {
+                  items: item
+                }
+              }
+            );
+          }
+        });
+      });
+    }
+  });
+}
+
+module.exports = seedDB;
