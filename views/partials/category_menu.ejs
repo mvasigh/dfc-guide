@@ -18,8 +18,8 @@
     <li><a>Authentication</a></li>
   </ul>
   <ul class="menu-list">
-    <li><a>Payments</a></li>
-    <li><a>Transfers</a></li>
-    <li><a>Balance</a></li>
+    <% categories.forEach(category => { %>
+      <li><a href="#"><%= category.name %></a></li>
+    <% }) %> 
   </ul>
 </aside>

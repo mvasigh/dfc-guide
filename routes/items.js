@@ -1,23 +1,34 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 const Item = require('../models/item');
+const Category = require('../models/category');
 const Fuse = require('fuse.js');
 
 // INDEX - show all items
 router.get('/', (req, res) => {
+  // TODO: Refactor this mess
   Item.find({}, (err, items) => {
     if (err) {
       console.log(err);
     } else {
-      if (req.query.search) {
-        const fuse = new Fuse(items, fuseOptions);
-        res.render('item/index', {
-          items: fuse.search(req.query.search),
-          search: req.query.search
-        });
-      } else {
-        res.render('item/index', { items: items, search: '' });
-      }
+      Category.find({}, (err, categories) => {
+        if (err) {
+          console.log(err);
+        } else if (req.query.search) {
+          const fuse = new Fuse(items, fuseOptions);
+          res.render('item/index', {
+            items: fuse.search(req.query.search),
+            categories: categories,
+            search: req.query.search
+          });
+        } else {
+          res.render('item/index', {
+            items: items,
+            categories: categories,
+            search: ''
+          });
+        }
+      });
     }
   });
 });
