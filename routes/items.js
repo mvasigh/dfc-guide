@@ -30,8 +30,6 @@ router.get('/new', (req, res) => {
 // CREATE - create a new item in db
 router.post('/', (req, res) => {
   req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
-
-  console.log(req.body.item);
   Item.create(req.body.item, (err, item) => {
     if (err) {
       console.log(err);
@@ -66,6 +64,7 @@ router.get('/:id/edit', (req, res) => {
 
 // UPDATE - update database with input
 router.put('/:id', (req, res) => {
+  req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
   Item.findByIdAndUpdate(req.params.id, req.body.item, (err, item) => {
     if (err) {
       console.log(err);
