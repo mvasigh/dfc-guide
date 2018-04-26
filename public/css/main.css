@@ -5,3 +5,7 @@
 a.dfc-item-title:hover {
   color: hsl(217, 71%, 53%) !important;
 }
+
+.tag {
+  text-transform: capitalize;
+}

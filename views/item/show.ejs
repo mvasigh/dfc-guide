@@ -7,9 +7,11 @@
                     <%= item.title %>
                 </h1>
                 <div class="tags">
-                    <a class="tag is-rounded is-link" href="#">Low-cost</a>
-                    <a class="tag is-rounded is-link" href="#">Homeless</a>
-                    <a class="tag is-rounded is-link" href="#">Adolescent Issues</a>
+                    <% if (item.tags) { %>
+                        <% item.tags.forEach(tag => { %>
+                            <a class="tag is-rounded is-link" href="/items?search=<%= tag %>"><%= tag %></a>
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div class="content">
                     <%= item.content %>

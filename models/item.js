@@ -9,6 +9,7 @@ const itemSchema = new mongoose.Schema({
       ref: 'Category'
     }
   ],
+  tags: [String],
   content: String
 });
 
