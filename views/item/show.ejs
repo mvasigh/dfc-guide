@@ -3,26 +3,23 @@
     <section class="section">
         <div class="container">
             <div class="box">
-                <h1 class="title">
+                <h4 class="title is-4">
                     <%= item.title %>
-                </h1>
+                </h4>
+                <a class="button is-pulled-right is-rounded is-small is-warning" href="/items/<%= item._id %>/edit">
+                    <span class="icon is-small">
+                        <i class="fas fa-pencil-alt"></i>
+                    </span>
+                </a>
                 <div class="tags">
                     <% if (item.tags) { %>
                         <% item.tags.forEach(tag => { %>
-                            <a class="tag is-rounded is-link" href="/items?search=<%= tag %>"><%= tag %></a>
+                            <a class="tag is-rounded is-light" href="/items?search=<%= tag %>"><%= tag %></a>
                         <% }) %>
                     <% } %>
                 </div>
                 <div class="content">
                     <%= item.content %>
-                </div>
-                <div class="field is-grouped">
-                    <p class="control">
-                        <a class="button" href="/items/<%= item._id %>/edit">Edit</a>
-                    </p>
-                    <form class="control" action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                        <button class="button is-danger">Delete</button>
-                    </form>
                 </div>
             </div>
         </div>
