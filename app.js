@@ -24,7 +24,7 @@ app.use(
 );
 app.use(methodOverride('_method'));
 
-seedDB();
+// seedDB();
 
 // ===============
 // ROUTES
