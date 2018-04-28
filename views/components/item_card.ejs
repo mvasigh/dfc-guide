@@ -1,0 +1,33 @@
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+          <p class="subtitle is-6">Category Name</p>
+      <p class="title is-5"><a href="/items/<%= item._id %>" class="has-text-dark"><%= item.title %></a></p>
+      <div class="tags">
+        <% if (item.tags) { %>
+            <% item.tags.forEach(tag => { %>
+                <a class="tag is-rounded is-light" href="/items?search=<%= tag %>"><%= tag %></a>
+            <% }) %>
+        <% } %>
+      </div>
+      <div class="content dfc-card-description">
+          <%= item.description %>
+      </div>
+      <span class="dfc-last-updated is-small is-pulled-right">Last updated today.</span>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="share">
+            <span class="icon is-small">
+              <i class="fas fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="edit" href="/items/<%= item._id %>/edit">
+            <span class="icon is-small">
+              <i class="far fa-star" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>

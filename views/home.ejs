@@ -85,31 +85,13 @@
                     </div>
                 </div>
             </div>
-            <h1 class="title">Popular Resources</h1>
-            <h2 class="subtitle has-text-grey">Pellentesque vel pulvinar magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</h2>
+            <p class="title is-3">Most Viewed</p>
+            <p class="subtitle has-text-grey is-5">View our most frequently accessed resources.</p>
             <div class="columns is-multiline">
                 <% items.forEach(item => { %>
                     <div class="column is-4">
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    <%= item.title %>
-                                </p>
-                                <a href="items/<%= item._id %>" class="card-header-icon">
-                                    <span class="icon">
-                                        <i class="fas fa-angle-right"></i>
-                                    </span>
-                                </a>
-                            </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    <p>
-                                        <%= item.description %>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <% include components/item_card %>
                     </div>
-                    <% }) %>
+                <% }) %>
             </div>
     </section>

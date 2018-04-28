@@ -1,11 +1,19 @@
-.dfc-item-list .card {
-  margin-bottom: 24px;
-}
-
-a.dfc-item-title:hover {
-  color: hsl(217, 71%, 53%) !important;
-}
-
 .tag {
   text-transform: capitalize;
+}
+
+.subtitle.is-6 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+}
+
+.dfc-last-updated {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.5);  
+}
+
+.dfc-card-description {
+  margin-bottom: 1.5rem !important;
 }
