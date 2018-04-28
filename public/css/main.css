@@ -7,11 +7,12 @@
   letter-spacing: 0.1rem;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .dfc-last-updated {
   font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.5);  
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .dfc-card-description {
