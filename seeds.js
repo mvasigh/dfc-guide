@@ -42,7 +42,7 @@ function seedDB() {
     if (err) {
       console.log(err);
     } else {
-      for (let i = 0; i < 100; i++) {
+      for (let j = 0; j < 100; j++) {
         Category.count().exec((err, count) => {
           let random = Math.floor(Math.random() * count);
 
@@ -67,7 +67,7 @@ function seedDB() {
                 } else {
                   console.log('Item created:', createdItem);
 
-                  category.items.push(createdItem._id);
+                  category.items.push(createdItem);
                   category.save();
                 }
               });
