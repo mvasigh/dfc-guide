@@ -96,7 +96,7 @@ router.put('/:id', (req, res) => {
           console.log(err);
         } else {
           console.log(item);
-          category.items.addToSet(item);
+          category.items.addToSet(item._id);
           category.save();
 
           res.redirect(`/items/${req.params.id}`);

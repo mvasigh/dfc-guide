@@ -1,7 +1,7 @@
 <div class="box">
   <article class="media">
     <div class="media-content">
-          <p class="subtitle is-6 dfc-category-label">Category Name</p>
+          <p class="subtitle is-6 dfc-category-label"><%= item.category.name %></p>
       <p class="title is-5"><a href="/items/<%= item._id %>" class="has-text-dark"><%= item.title %></a></p>
       <div class="tags">
         <% if (item.tags) { %>
