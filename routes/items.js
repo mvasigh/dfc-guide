@@ -68,19 +68,40 @@ router.get('/:id/edit', (req, res) => {
     if (err) {
       res.redirect('back');
     } else {
-      res.render('item/edit', { item: item });
+      Category.find({}, (err, categories) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.render('item/edit', { item, categories });
+        }
+      });
     }
   });
 });
 
 // UPDATE - update database with input
 router.put('/:id', (req, res) => {
-  req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
-  Item.findByIdAndUpdate(req.params.id, req.body.item, (err, item) => {
+  Category.findById(req.body.selection, (err, category) => {
     if (err) {
       console.log(err);
     } else {
-      res.redirect(`/items/${req.params.id}`);
+      req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
+      req.body.item.category = {
+        name: category.name,
+        id: category.id
+      };
+
+      Item.findByIdAndUpdate(req.params.id, req.body.item, (err, item) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(item);
+          category.items.addToSet(item);
+          category.save();
+
+          res.redirect(`/items/${req.params.id}`);
+        }
+      });
     }
   });
 });
