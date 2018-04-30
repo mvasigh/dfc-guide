@@ -1,6 +1,12 @@
 <aside class="menu">
+  <p class="menu-label">Categories</p>
   <ul class="menu-list">
-    <li><a>Dashboard</a></li>
+    <% categories.forEach(category => { %>
+      <li><a href="?category=<%= category._id %>"><%= category.name %></a></li>
+    <% }) %> 
+  </ul>
+  <ul class="menu-list">
+    <li><a href="?test=test">Dashboard</a></li>
     <li><a>Customers</a></li>
   </ul>
   <ul class="menu-list">
@@ -17,9 +23,5 @@
     <li><a>Cloud Storage Environment Settings</a></li>
     <li><a>Authentication</a></li>
   </ul>
-  <ul class="menu-list">
-    <% categories.forEach(category => { %>
-      <li><a href="#"><%= category.name %></a></li>
-    <% }) %> 
-  </ul>
+
 </aside>

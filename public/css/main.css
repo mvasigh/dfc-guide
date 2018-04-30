@@ -2,11 +2,11 @@
   text-transform: capitalize;
 }
 
-.subtitle.is-6 {
+.dfc-category-label {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 0.8rem;
+  font-size: 0.8rem !important;
   font-weight: 500;
 }
 

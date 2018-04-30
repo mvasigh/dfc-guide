@@ -4,13 +4,12 @@
     <div class="container">
       <div class="columns">
         <div class="column is-one-third">
-          <% include ../partials/category_menu %>
+          <% include ../components/category_menu %>
         </div>
         <div class="column is-two-thirds dfc-item-list">
 
           <% if (search.length > 0) { %>
-            <h2 class="subtitle">
-              Here are your search results for "<%= search %>"</h2>
+            <p class="subtitle is-6">Here are your search results for "<%= search %>"</p>
             <% } %>
           <% items.forEach(item => { %>
             <% include ../components/item_card %>
