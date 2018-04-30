@@ -62,4 +62,22 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+router.get('/:categoryId', (req, res) => {
+  Category.findById(req.params.categoryId)
+    .populate('items')
+    .exec((err, category) => {
+      if (err) {
+        console.log(err);
+      } else {
+        Category.find({}, (err, categories) => {
+          if (err) {
+            console.log(err);
+          } else {
+            res.render('category/show', { category, categories });
+          }
+        });
+      }
+    });
+});
+
 module.exports = router;
