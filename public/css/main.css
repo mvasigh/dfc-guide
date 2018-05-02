@@ -1,25 +1,26 @@
-body {
-  padding-top: 3rem;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .tag {
   text-transform: capitalize;
   border: 0.5px solid #ddd;
 }
 
 .dfc-logo-container {
+  padding-left: 6px;
+  padding-right: 6px;
   margin-left: 6px;
-  padding-right: 0;
+  margin-right: -6px;
 }
 
 .dfc-logo-container img {
-  transform: scale(1.2);
+  background-color: #1877c8;
+  padding: 3px;
+  transform: scale(1.3);
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.dfc-logo-container img:hover {
+  background-color: #186bb3;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .dfc-logo-container:hover {

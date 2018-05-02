@@ -1,32 +1,30 @@
-<nav class="navbar is-info is-shadowless" role="navigation" aria-label="main navigation">
-    <div class="container is-flex">
+<nav class="navbar is-info is-fixed-top is-shadowless" role="navigation" aria-label="main navigation">
+    <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item dfc-logo-container" href="/">
+            <a class="navbar-item dfc-logo-container" href="/home">
                 <img src="/assets/navbar_logo.png" alt="Doctors for Change Guide">
             </a>
-            <form class="navbar-item is-expanded dfc-navbar-search" action="/items" method="GET">
-                <div class="field is-grouped">
+            <form class="navbar-item" action="/items" method="GET">
                     <div class="control has-icons-left">
                         <input type="text" class="input is-rounded" placeholder="Search DFC Guide..." name="search">
                         <span class="icon is-left is-small">
                             <i class="fas fa-search"></i>
                         </span>
                     </div>
-                </div>
             </form>
+            <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <div class="navbar-menu">
+        <div class="navbar-menu has-background-info" id="navMenu">
             <div class="navbar-start">
             </div>
             <div class="navbar-end">
-                <a class="navbar-item" href="#">Feedback</a>
-                <a class="navbar-item" href="#">Account</a>
+                <a class="navbar-item has-text-white has-background-info" href="#">Feedback</a>
+                <a class="navbar-item has-text-white has-background-info" href="#">Account</a>
             </div>
         </div>
-        <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
     </div>
 </nav>
