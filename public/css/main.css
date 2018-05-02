@@ -1,5 +1,16 @@
+body {
+  padding-top: 3rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .tag {
   text-transform: capitalize;
+  border: 0.5px solid #ddd;
 }
 
 .dfc-logo-container {
