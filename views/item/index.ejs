@@ -3,11 +3,10 @@
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-one-quarter">
-          <% include ../components/category_menu %>
-        </div>
-        <div class="column is-three-quarters dfc-item-list">
-
+      <div class="column is-4">
+      <% include ../components/category_menu %>
+    </div>
+        <div class="column is-8 dfc-item-list">
           <% if (search.length > 0) { %>
             <p class="subtitle is-6">Here are your search results for "<%= search %>"</p>
             <% } %>
@@ -15,6 +14,7 @@
             <% include ../components/item_card %>
           <% }) %>
         </div>
+
       </div>
     </div>
   </section>

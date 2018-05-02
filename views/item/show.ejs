@@ -2,24 +2,32 @@
 
     <section class="section">
         <div class="container">
-            <div class="box">
-                <h4 class="title is-4">
-                    <%= item.title %>
-                </h4>
-                <a class="button is-pulled-right is-rounded is-small is-warning" href="/items/<%= item._id %>/edit">
-                    <span class="icon is-small">
-                        <i class="fas fa-pencil-alt"></i>
-                    </span>
-                </a>
-                <div class="tags">
-                    <% if (item.tags) { %>
-                        <% item.tags.forEach(tag => { %>
-                            <a class="tag is-rounded is-light" href="/items?search=<%= tag %>"><%= tag %></a>
-                        <% }) %>
-                    <% } %>
+            <div class="columns">
+                <div class="column is-8 is-centered">
+                    <div class="box">
+                        <h4 class="title is-4">
+                            <%= item.title %>
+                        </h4>
+                        <a class="button is-pulled-right is-rounded is-small is-warning" href="/items/<%= item._id %>/edit">
+                            <span class="icon is-small">
+                                <i class="fas fa-pencil-alt"></i>
+                            </span>
+                        </a>
+                        <div class="tags">
+                            <% if (item.tags) { %>
+                                <% item.tags.forEach(tag => { %>
+                                    <a class="tag is-rounded is-light" href="/items?search=<%= tag %>">
+                                        <%= tag %>
+                                    </a>
+                                    <% }) %>
+                                        <% } %>
+                        </div>
+                        <div class="content">
+                            <%= item.content %>
+                        </div>
+                    </div>
                 </div>
-                <div class="content">
-                    <%= item.content %>
+                <div class="column is-4">
                 </div>
             </div>
         </div>

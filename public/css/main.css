@@ -2,6 +2,19 @@
   text-transform: capitalize;
 }
 
+.dfc-logo-container {
+  margin-left: 6px;
+  padding-right: 0;
+}
+
+.dfc-logo-container img {
+  transform: scale(1.2);
+}
+
+.dfc-logo-container:hover {
+  background-color: inherit !important;
+}
+
 .dfc-category-label {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
