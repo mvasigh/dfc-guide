@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const Item = require('./models/item');
 const itemsRoutes = require('./routes/items');
 const categoriesRoutes = require('./routes/categories');
+const guidesRoutes = require('./routes/guides');
 const indexRoutes = require('./routes/index');
 
 // ==============
@@ -32,6 +33,7 @@ app.use(methodOverride('_method'));
 // ===============
 app.use('/items', itemsRoutes);
 app.use('/categories', categoriesRoutes);
+app.use('/guides', guidesRoutes);
 app.use('/', indexRoutes);
 
 app.listen(3000, () => {
