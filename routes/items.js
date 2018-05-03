@@ -117,7 +117,7 @@ router.delete('/:id', (req, res) => {
 });
 
 const fuseOptions = {
-  keys: ['title', 'tags', 'category.name'],
+  keys: ['title', 'tags', 'category.name', 'description'],
   minMatchCharLength: 1,
   shouldSort: true
 };
