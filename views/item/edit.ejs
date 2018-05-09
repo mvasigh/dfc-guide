@@ -63,7 +63,7 @@
   </section>
 
   <script>
-    const resourceContent = '<%- item.content -%>';
+    const resourceContent = <%- JSON.stringify(item.content) -%>
   </script>
   <script src="/js/pell.js"></script>
   <script src="/js/editor.js"></script>

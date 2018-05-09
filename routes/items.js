@@ -72,7 +72,6 @@ router.get('/:id/edit', (req, res) => {
         if (err) {
           console.log(err);
         } else {
-          res.locals.resourceItem = item;
           res.render('item/edit', { item, categories });
         }
       });
