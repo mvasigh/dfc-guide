@@ -4,7 +4,6 @@ const engine = require('ejs-mate');
 const bodyParser = require('body-parser');
 const seedDB = require('./seeds');
 const methodOverride = require('method-override');
-const Item = require('./models/item');
 const itemsRoutes = require('./routes/items');
 const categoriesRoutes = require('./routes/categories');
 const guidesRoutes = require('./routes/guides');
