@@ -1,0 +1,52 @@
+<%- layout('layout') -%>
+
+  <section class="section">
+    <div class="container">
+
+      <form class="control is-pulled-right" action="/guides/<%= guide._id %>?_method=DELETE" method="POST">
+        <button class="button is-danger is-rounded is-outlined">
+          <span class="icon is-small">
+            <i class="fas fa-trash-alt"></i>
+          </span>
+          <span>Delete</span>
+        </button>
+      </form>
+
+
+      <h1 class="title">Edit Guide</h1>
+      <form action="/guides/<%= guide._id %>?_method=PUT" method="POST">
+
+        <div class="field">
+          <label class="label">Guide Title</label>
+          <div class="control">
+            <input class="input" type="text" value="<%= guide.title %>" name="guide[title]">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Content</label>
+          <div class="control">
+            <div id="editor"></div>
+            <textarea style="display: none" name="guide[content]" id="editorOutput"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button class="button is-success is-rounded">
+              <span class="icon is-small">
+                <i class="fas fa-save"></i>
+              </span>
+              <span>Submit</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const resourceContent = <%- JSON.stringify(guide.content) -%>
+  </script>
+  <script src="/js/pell.js"></script>
+  <script src="/js/editor.js"></script>
