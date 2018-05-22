@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
   Item.findById(req.params.id, (err, item) => {
     if (err) {
       console.log(err);
-      res.redirect('/');
+      res.redirect('/'); 
     } else {
       res.render('item/show', { item: item });
     }

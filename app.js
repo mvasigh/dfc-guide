@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const engine = require('ejs-mate');
 const bodyParser = require('body-parser');
+const expressSanitizer = require('express-sanitizer');
+const helmet = require('helmet');
 const seedDB = require('./seeds');
 const methodOverride = require('method-override');
 const itemsRoutes = require('./routes/items');
@@ -9,13 +11,16 @@ const categoriesRoutes = require('./routes/categories');
 const guidesRoutes = require('./routes/guides');
 const indexRoutes = require('./routes/index');
 
+mongoose.connect('mongodb://localhost/dfc_guide');
+
 // ==============
 // APP CONFIG
 // ==============
-mongoose.connect('mongodb://localhost/dfc_guide');
 const app = express();
+
 app.engine('ejs', engine);
 app.set('views', __dirname + '/views');
+
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(
@@ -24,6 +29,8 @@ app.use(
   })
 );
 app.use(methodOverride('_method'));
+app.use(expressSanitizer());
+app.use(helmet());
 
 // seedDB();
 
