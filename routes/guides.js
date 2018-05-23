@@ -2,6 +2,19 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 const Guide = require('../models/Guide');
+const Topic = require('../models/Topic');
+
+// INDEX
+router.get('/', async (req, res) => {
+  try {
+    const topics = await Topic.find({});
+    const guides = await Guide.find({});
+
+    res.render('guide/index', { topics, guides });
+  } catch (e) {
+    console.log(e);
+  }
+});
 
 // NEW
 router.get('/new', (req, res) => {
