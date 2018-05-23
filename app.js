@@ -9,6 +9,7 @@ const methodOverride = require('method-override');
 const itemsRoutes = require('./routes/items');
 const categoriesRoutes = require('./routes/categories');
 const guidesRoutes = require('./routes/guides');
+const topicsRoutes = require('./routes/topics');
 const indexRoutes = require('./routes/index');
 
 mongoose.connect('mongodb://localhost/dfc_guide');
@@ -40,6 +41,7 @@ app.use(helmet());
 app.use('/items', itemsRoutes);
 app.use('/categories', categoriesRoutes);
 app.use('/guides', guidesRoutes);
+app.use('/topics', topicsRoutes);
 app.use('/', indexRoutes);
 
 app.listen(3000, () => {
