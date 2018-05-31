@@ -4,7 +4,7 @@ const Guide = require('./Guide');
 const topicSchema = new mongoose.Schema({
   title: {
     type: String,
-    default: 'Untited'
+    default: 'Untitled'
   },
   index: Number,
   guides: [
