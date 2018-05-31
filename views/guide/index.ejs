@@ -8,7 +8,17 @@
         </div>
         <div class="column is-8">
           <% topics.forEach(topic => { %>
-            <%= 'hello world' %>
+            <% if (topic.guides.length > 0) { %>
+              <p class="title is-4"><%= topic.title %></p>
+                <% topic.guides.forEach(guide => { %>
+                    <div class="box">
+                      <a href="/guides/<%= guide.id %>" class="has-text-dark">
+                        <p class="title is-5"><%= guide.title %></p>
+                        <div class="content"><%= guide.description %></div>
+                      </a>
+                    </div>
+                <% }) %>
+            <% } %>
           <% }) %>
         </div>
       </div>

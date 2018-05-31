@@ -3,6 +3,9 @@
     <section class="hero is-link is-bold is-medium">
         <div class="hero-body">
             <div class="container has-text-centered">
+                <div class="dfc-hero-logo">
+                    <img src="/assets/svg/logo_white.svg">
+                </div>
                 <h1 class="title">
                     DFC Guide
                 </h1>
@@ -13,7 +16,7 @@
                     <div class="column is-half is-narrow">
                         <form action="/items" method="GET">
                             <div class="field">
-                                <div class="control has-icons-left">
+                                <div class="control has-icons-left dfc-hero-input">
                                     <input type="text" class="input is-medium is-rounded" placeholder="Search the Guide..." name="search">
                                     <span class="icon is-left is-medium">
                                         <i class="fas fa-search"></i>
@@ -64,7 +67,7 @@
             <p class="title is-4">Most Viewed</p>
             <p class="subtitle has-text-grey is-6">View our most frequently accessed resources.</p>
             <div class="columns is-multiline">
-                <% items.forEach(item => { %>
+                <% items.filter((item, index) => index < 6).forEach(item => { %>
                     <div class="column is-4">
                         <% include components/item_card %>
                     </div>
