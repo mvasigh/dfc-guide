@@ -1,3 +1,11 @@
+html {
+  background-color: #fafafa;
+}
+
+body {
+  background-color: #fafafa;
+}
+
 .tag {
   text-transform: capitalize;
   border: 0.5px solid #ddd;
@@ -42,4 +50,24 @@
 
 .dfc-card-description {
   margin-bottom: 1.5rem !important;
+}
+
+.dfc-hero-logo img {
+  background-color: #186bb3;
+  box-shadow: 0.1rem 0.4rem 2.5rem rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  margin: 1.6rem auto 0.8rem;
+  width: 40%;
+  max-width: 10rem;
+  border-radius: 50%;
+}
+
+.dfc-hero-input {
+  box-shadow: 0rem 0.2rem 1.8rem rgba(0, 0, 0, 0.12);
+}
+
+.dfc-footer-logo {
+  margin: 0 auto 0.8rem;
+  width: 30%;
+  max-width: 5rem;
 }
