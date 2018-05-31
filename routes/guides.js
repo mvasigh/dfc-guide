@@ -37,10 +37,11 @@ router.post('/', async (req, res) => {
 });
 
 // SHOW
-router.get('/:guideId', (req, res) => {
-  Guide.findById(req.params.guideId, (err, guide) => {
-    res.render('guide/show', { guide });
-  });
+router.get('/:guideId', async (req, res) => {
+  const guide = await Guide.findById(req.params.guideId);
+  const topics = await Topic.find({});
+
+  res.render('guide/show', { guide, topics });
 });
 
 // EDIT
