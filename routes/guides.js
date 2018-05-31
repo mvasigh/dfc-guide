@@ -7,9 +7,10 @@ const Topic = require('../models/Topic');
 // INDEX
 router.get('/', async (req, res) => {
   try {
-    const topics = await Topic.find({});
+    const topics = await Topic.find({}).populate('guides');
     const guides = await Guide.find({});
 
+    console.log(topics[0].guides);
     res.render('guide/index', { topics, guides });
   } catch (e) {
     console.log(e);
@@ -27,7 +28,11 @@ router.post('/', async (req, res) => {
     const topic = await Topic.findById(req.body.topic);
     const guide = await Guide.create({ ...req.body.guide, topic });
 
-    topic.guides.push({ title: guide.title, id: guide._id });
+    topic.guides.push({
+      title: guide.title,
+      description: guide.description,
+      id: guide._id
+    });
     topic.save();
 
     res.redirect(`guides/${guide._id}`);
@@ -40,6 +45,8 @@ router.post('/', async (req, res) => {
 router.get('/:guideId', async (req, res) => {
   const guide = await Guide.findById(req.params.guideId);
   const topics = await Topic.find({});
+
+  console.log({ guide, topics });
 
   res.render('guide/show', { guide, topics });
 });
