@@ -6,9 +6,11 @@ const topicSchema = new mongoose.Schema({
     type: String,
     default: 'Untited'
   },
+  index: Number,
   guides: [
     {
       title: String,
+      description: String,
       id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Guide'
