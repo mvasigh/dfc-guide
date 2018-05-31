@@ -4,67 +4,12 @@
     <div class="container">
       <div class="columns">
         <div class="column is-4">
-          <aside class="menu">
-            <% topics.forEach(topic => { %>
-              <p class="menu-label"><%= topic.title %></p>
-            <% }) %>
-            <p class="menu-label">
-              Introduction
-            </p>
-            <ul class="menu-list">
-              <li>
-                <a class="is-active">Poverty</a>
-                <ul>
-                  <li>
-                    <a>Facts</a>
-                  </li>
-                  <li>
-                    <a>Helpful Links</a>
-                  </li>
-                  <li>
-                    <a>References</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Food Insecurity</a>
-              </li>
-              <li>
-                <a>Health Care</a>
-              </li>
-              <li>
-                <a>Obesity</a>
-              </li>
-              <li>
-                <a>Adolescent Issues</a>
-              </li>
-              <li>
-                <a>Mental Health</a>
-              </li>
-              <li>
-                <a>Domestic Violence</a>
-              </li>
-              <li>
-                <a>Human Trafficking</a>
-              </li>
-              <li>
-                <a>Education</a>
-              </li>
-            </ul>
-            <p class="menu-label">
-              Identifying Patients in Need
-            </p>
-            <ul class="menu-list">
-              <li>
-                <a>Screening for Social Needs</a>
-              </li>
-              <li>
-                <a>Evidence-Based Questions</a>
-              </li>
-            </ul>
-          </aside>
+          <% include ../components/topic_menu %>
         </div>
         <div class="column is-8">
+          <% topics.forEach(topic => { %>
+            <%= 'hello world' %>
+          <% }) %>
         </div>
       </div>
     </div>
