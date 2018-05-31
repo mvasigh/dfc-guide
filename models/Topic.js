@@ -8,8 +8,11 @@ const topicSchema = new mongoose.Schema({
   },
   guides: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Guide'
+      title: String,
+      id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Guide'
+      }
     }
   ]
 });
