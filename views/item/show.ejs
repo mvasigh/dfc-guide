@@ -8,10 +8,11 @@
                 </div>
                 <div class="column is-8">
                     <div class="box">
+                    <p class="subtitle is-6 dfc-category-label"><%= item.category.name %></p>
                         <h4 class="title is-4">
                             <%= item.title %>
                         </h4>
-                        <a class="button is-pulled-right is-rounded is-small is-warning" href="/items/<%= item._id %>/edit">
+                        <a class="button is-pulled-right is-small is-outlined is-warning" href="/items/<%= item._id %>/edit">
                             <span class="icon is-small">
                                 <i class="fas fa-pencil-alt"></i>
                             </span>
@@ -29,8 +30,14 @@
                             <%- item.content -%>
                         </div>
                     </div>
-                </div>
-                <div class="column is-4">
+                    <p class="title is-4">Related resources:</p>
+                    <div class="columns is-multiline">
+                        <% relatedItems.forEach(item => { %>
+                            <div class="column is-half">
+                                <% include ../components/item_card %>
+                            </div>
+                        <% }) %>
+                    </div>
                 </div>
             </div>
         </div>

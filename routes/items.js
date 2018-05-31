@@ -42,8 +42,13 @@ router.get('/:itemId', async (req, res) => {
   try {
     const item = await Item.findById(req.params.itemId);
     const categories = await Category.find({});
+    const relatedItems = await Item.find({
+      category: {
+        name: item.category.name
+      }
+    }).then(items => items.filter((item, index) => index < 4));
 
-    res.render('item/show', { item, categories });
+    res.render('item/show', { item, categories, relatedItems });
   } catch (e) {
     console.log(e);
   }
@@ -94,7 +99,9 @@ router.delete('/:itemId', (req, res) => {
 const fuseOptions = {
   keys: ['title', 'tags', 'category.name', 'description'],
   minMatchCharLength: 1,
-  shouldSort: true
+  shouldSort: true,
+  findAllMatches: true,
+  matchAllTokens: false
 };
 
 module.exports = router;
