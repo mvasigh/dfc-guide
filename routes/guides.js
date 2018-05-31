@@ -18,17 +18,22 @@ router.get('/', async (req, res) => {
 
 // NEW
 router.get('/new', (req, res) => {
-  res.render('guide/new');
+  Topic.find({}).then(topics => res.render('guide/new', { topics }));
 });
 
 // CREATE
-router.post('/', (req, res) => {
-  Guide.create(req.body.guide)
-    .then(guide => {
-      console.log(guide);
-      res.redirect('/');
-    })
-    .catch(err => console.log(err));
+router.post('/', async (req, res) => {
+  try {
+    const topic = await Topic.findById(req.body.topic);
+    const guide = await Guide.create({ ...req.body.guide, topic });
+
+    topic.guides.push({ title: guide.title, id: guide._id });
+    topic.save();
+
+    res.redirect(`guides/${guide._id}`);
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 // SHOW
