@@ -9,8 +9,6 @@ router.get('/', async (req, res) => {
   try {
     const topics = await Topic.find({}).populate('guides');
     const guides = await Guide.find({});
-
-    console.log(topics[0].guides);
     res.render('guide/index', { topics, guides });
   } catch (e) {
     console.log(e);
