@@ -7,10 +7,24 @@
           <% include ../components/category_menu %>
         </div>
         <div class="column is-9">
-        <% category.items.forEach(item => { %>
-          <% include ../components/item_card %>
-        <% }) %>
+          <% items.forEach((page, index) => { %>
+            <div class="dfc-page" data-page="<%= index %>">
+              <% page.forEach(item => { %>
+                <% include ../components/item_card %>
+              <% }) %>
+            </div>
+          <% }) %>
+          <% if (items.length > 0) { %>
+            <div class="level">
+              <div class="level-item" id="paginateContainer">
+                <button class="button" id="paginateBtn">Load More Items</button>
+              </div>
+            </div>
+          <% } %>
+        </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script type="text/javascript" src="/js/pagination.js"></script>
