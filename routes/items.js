@@ -1,17 +1,25 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
+const _ = require('lodash');
+const Fuse = require('fuse.js');
+const FUSE_CONFIG = require('../config/fuse_config');
 const Item = require('../models/item');
 const Category = require('../models/category');
-const Fuse = require('fuse.js');
 
 // INDEX - show all items
 router.get('/', async (req, res) => {
   try {
-    const items = await Item.find({});
+    let items = await Item.find({});
     const categories = await Category.find({});
-    const fuse = new Fuse(items, fuseOptions);
+    const fuse = new Fuse(items, FUSE_CONFIG);
+
+    if (req.query.search) {
+      items = fuse.search(req.query.search);
+    }
+    items = _.chunk(items, 10);
+
     const options = {
-      items: req.query.search ? fuse.search(req.query.search) : items,
+      items,
       categories,
       search: req.query.search || ''
     };
@@ -95,13 +103,5 @@ router.delete('/:itemId', (req, res) => {
     res.redirect('/items');
   });
 });
-
-const fuseOptions = {
-  keys: ['title', 'tags', 'category.name', 'description'],
-  minMatchCharLength: 1,
-  shouldSort: true,
-  findAllMatches: true,
-  matchAllTokens: false
-};
 
 module.exports = router;

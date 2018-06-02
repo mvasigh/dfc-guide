@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
+const _ = require('lodash');
 const Category = require('../models/category');
 
 // INDEX
@@ -62,22 +63,17 @@ router.delete('/:id', (req, res) => {
   });
 });
 
-router.get('/:categoryId', (req, res) => {
-  Category.findById(req.params.categoryId)
-    .populate('items')
-    .exec((err, category) => {
-      if (err) {
-        console.log(err);
-      } else {
-        Category.find({}, (err, categories) => {
-          if (err) {
-            console.log(err);
-          } else {
-            res.render('category/show', { category, categories });
-          }
-        });
-      }
-    });
+router.get('/:categoryId', async (req, res) => {
+  try {
+    const categories = await Category.find({});
+    const category = await Category.findById(req.params.categoryId).populate(
+      'items'
+    );
+    items = _.chunk(category.items, 10);
+    res.render('category/show', { items, categories });
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 module.exports = router;
