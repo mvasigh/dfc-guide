@@ -1,10 +1,14 @@
 {
   "name": "dfc-guide",
   "version": "0.0.1",
-  "description": "Doctors for Change Guide for access to care and community resources.",
+  "description":
+    "Doctors for Change Guide for access to care and community resources.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:scss": "node-sass scss/main.scss temp/css/main.css",
+    "prefix:css": "postcss temp/css/main.css --use autoprefixer -d public/css/",
+    "build:css": "npm run build:scss && npm run prefix:css",
+    "watch:css": "watch \"npm run build:css\" scss/"
   },
   "author": "Mehdi Vasigh",
   "license": "ISC",
@@ -24,6 +28,9 @@
     "pell": "^1.0.4"
   },
   "devDependencies": {
-    "node-sass": "^4.9.0"
+    "autoprefixer": "^8.6.0",
+    "node-sass": "^4.9.0",
+    "postcss-cli": "^5.0.0",
+    "watch": "^1.0.2"
   }
 }
