@@ -71,3 +71,11 @@ body {
   width: 30%;
   max-width: 5rem;
 }
+
+.dfc-page {
+  margin-bottom: 1.5rem;
+}
+
+.is-hidden {
+  display: hidden;
+}
