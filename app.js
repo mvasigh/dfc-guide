@@ -1,23 +1,23 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const engine = require('ejs-mate');
-const bodyParser = require('body-parser');
-const expressSanitizer = require('express-sanitizer');
-const helmet = require('helmet');
-const seedDB = require('./seeds');
-const methodOverride = require('method-override');
+const express = require('express'),
+  mongoose = require('mongoose'),
+  engine = require('ejs-mate'),
+  bodyParser = require('body-parser'),
+  expressSanitizer = require('express-sanitizer'),
+  helmet = require('helmet'),
+  methodOverride = require('method-override');
 
-const itemsRoutes = require('./routes/items');
-const categoriesRoutes = require('./routes/categories');
-const guidesRoutes = require('./routes/guides');
-const topicsRoutes = require('./routes/topics');
-const indexRoutes = require('./routes/index');
-
+// ==============
+// DB CONFIG
+// ==============
+const db = require('./config/keys').mongoURI;
+mongoose
+  .connect(db)
+  .then(() => console.log('Connected to database'))
+  .catch(e => console.log(e));
 
 // ==============
 // APP CONFIG
 // ==============
-mongoose.connect('mongodb://localhost/dfc_guide');
 const app = express();
 
 app.engine('ejs', engine);
@@ -34,11 +34,15 @@ app.use(methodOverride('_method'));
 app.use(expressSanitizer());
 app.use(helmet());
 
-// seedDB();
-
 // ===============
 // ROUTES
 // ===============
+const itemsRoutes = require('./routes/items'),
+  categoriesRoutes = require('./routes/categories'),
+  guidesRoutes = require('./routes/guides'),
+  topicsRoutes = require('./routes/topics'),
+  indexRoutes = require('./routes/index');
+
 app.use('/items', itemsRoutes);
 app.use('/categories', categoriesRoutes);
 app.use('/guides', guidesRoutes);
