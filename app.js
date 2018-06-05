@@ -9,7 +9,7 @@ const express = require('express'),
 // ==============
 // DB CONFIG
 // ==============
-const db = require('./config/keys').mongoURI;
+const db = require('./config/keys').mongoURI || process.env.MONGO_URI;
 mongoose
   .connect(db)
   .then(() => console.log('Connected to database'))
