@@ -8,7 +8,8 @@
     "build:scss": "node-sass scss/main.scss temp/css/main.css",
     "prefix:css": "postcss temp/css/main.css --use autoprefixer -d public/css/",
     "build:css": "npm run build:scss && npm run prefix:css",
-    "watch:css": "watch \"npm run build:css\" scss/"
+    "watch:css": "watch \"npm run build:css\" scss/",
+    "start": "node app.js"
   },
   "author": "Mehdi Vasigh",
   "license": "ISC",
