@@ -8,8 +8,7 @@
         </div>
         <div class="column is-9">
           <% if (search.length > 0) { %>
-            <p class="subtitle is-6">Here are your search results for "
-              <%= search %>"</p>
+            <p class="subtitle is-6">Here are your search results for "<%= search %>"</p>
           <% } %>
           <% items.forEach((page, index) => { %>
             <div class="dfc-page" data-page="<%= index %>">
@@ -18,7 +17,7 @@
               <% }) %>
             </div>
           <% }) %>
-          <% if (items.length > 0) { %>
+          <% if (items.length > 10) { %>
             <div class="level">
               <div class="level-item" id="paginateContainer">
                 <button class="button" id="paginateBtn">Load More Items</button>
