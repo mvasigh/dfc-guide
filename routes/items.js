@@ -55,13 +55,16 @@ router.get('/:itemId', async (req, res) => {
   try {
     const item = await Item.findById(req.params.itemId);
     const categories = await Category.find({});
-    const relatedItems = await Item.find({
-      category: {
-        name: item.category.name
-      }
-    }).then(items => items.filter((item, index) => index < 4));
+    const fuse = new Fuse(await Item.find({}), FUSE_CONFIG);
 
-    res.render('item/show', { item, categories, relatedItems });
+    res.render('item/show', {
+      item,
+      categories,
+      relatedItems: fuse
+        .search(item.category.name)
+        .filter(relatedItem => relatedItem.title != item.title)
+        .filter((entry, i) => i < 4)
+    });
   } catch (e) {
     console.log(e);
   }
@@ -91,12 +94,26 @@ router.put('/:itemId', async (req, res) => {
     category: { name: category.name, id: category.id }
   };
 
-  Item.findByIdAndUpdate(req.params.itemId, update).then(item => {
-    category.items.addToSet(item._id);
-    category.save();
+  // Delete item from old category
+  Category.updateOne(
+    { items: { _id: req.params.itemId } },
+    {
+      $pull: {
+        items: req.params.itemId
+      }
+    },
+    err => {
+      if (err) console.log(err);
+      else {
+        Item.findByIdAndUpdate(req.params.itemId, update).then(item => {
+          category.items.addToSet(item._id);
+          category.save();
 
-    res.redirect(`/items/${req.params.itemId}`);
-  });
+          res.redirect(`/items/${req.params.itemId}`);
+        });
+      }
+    }
+  );
 });
 
 // DESTROY
