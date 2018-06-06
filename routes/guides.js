@@ -1,8 +1,10 @@
-const express = require('express');
-const router = express.Router({ mergeParams: true });
+const express = require('express'),
+  router = express.Router({ mergeParams: true }),
+  _ = require('lodash');
 
-const Guide = require('../models/Guide');
-const Topic = require('../models/Topic');
+// Models
+const Guide = require('../models/Guide'),
+  Topic = require('../models/Topic');
 
 // INDEX
 router.get('/', async (req, res) => {
@@ -24,7 +26,11 @@ router.get('/new', (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const topic = await Topic.findById(req.body.topic);
-    const guide = await Guide.create({ ...req.body.guide, topic });
+    const guide = await Guide.create({
+      ...req.body.guide,
+      title: _.startCase(req.body.guide.title),
+      topic
+    });
 
     topic.guides.push({
       title: guide.title,
