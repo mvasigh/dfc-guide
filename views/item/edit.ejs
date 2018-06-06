@@ -2,37 +2,41 @@
 
   <section class="section">
     <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2">
-          <form class="control is-pulled-right" action="/items/<%= item._id %>?_method=DELETE" method="POST">
-            <button class="button is-danger is-outlined">
+      <form action="/items/<%= item._id %>?_method=PUT" method="POST">
+        <div class="field is-pulled-right">
+          <div class="control">
+            <button type="submit" class="button is-dark is-outlined">
               <span class="icon is-small">
-                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-save"></i>
               </span>
-              <span>Delete</span>
+              <span>Save</span>
             </button>
-          </form>
-          <h1 class="title">Edit item</h1>
-          <form action="/items/<%= item._id %>?_method=PUT" method="POST">
-            <div class="field">
-              <label class="label">Item Title</label>
-              <div class="control">
-                <input class="input" type="text" value="<%= item.title %>" name="item[title]">
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Description</label>
-              <div class="control">
-                <input class="input" type="text" value="<%= item.description %>" name="item[description]">
-              </div>
-            </div>        
+          </div>
+        </div>
+        <h1 class="title">Edit item</h1>
+        <div class="field">
+          <label class="label">Item Title</label>
+          <div class="control">
+            <input class="input" type="text" value="<%= item.title %>" name="item[title]">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <input class="input" type="text" value="<%= item.description %>" name="item[description]">
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-4">
             <div class="field">
               <label class="label">Category</label>
               <div class="select">
                 <select name="category">
                   <% categories.forEach(category => {  %>
-                    <option value="<%= category._id %>" <%= item.category.name === category.name ? 'selected' : '' %>><%= category.name %></option>
-                  <% }) %>
+                    <option value="<%= category._id %>" <%=item.category.name === category.name ? 'selected' : '' %>>
+                      <%= category.name %>
+                    </option>
+                    <% }) %>
                 </select>
               </div>
             </div>
@@ -42,6 +46,8 @@
                 <input class="input" type="text" value="<%= item.tags.join(', ') %>" name="item[tags]">
               </div>
             </div>
+          </div>
+          <div class="column is-8">
             <div class="field">
               <label class="label">Content</label>
               <div class="control">
@@ -49,18 +55,17 @@
                 <textarea style="display: none" name="item[content]" id="editorOutput"></textarea>
               </div>
             </div>
-            <div class="field">
-              <div class="control">
-                <button class="button">
-                  <span class="icon is-small">
-                    <i class="fas fa-save"></i>
-                  </span>
-                  <span>Save</span>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+      </form>
+      <form class="control" action="/items/<%= item._id %>?_method=DELETE" method="POST">
+        <button class="button is-danger is-outlined">
+          <span class="icon is-small">
+            <i class="fas fa-trash-alt"></i>
+          </span>
+          <span>Delete</span>
+        </button>
+      </form>
+      </div>
+
       </div>
     </div>
   </section>
