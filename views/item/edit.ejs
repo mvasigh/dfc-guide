@@ -31,7 +31,7 @@
               <div class="select">
                 <select name="category">
                   <% categories.forEach(category => {  %>
-                    <option value="<%= category._id %>"><%= category.name %></option>
+                    <option value="<%= category._id %>" <%= item.category.name === category.name ? 'selected' : '' %>><%= category.name %></option>
                   <% }) %>
                 </select>
               </div>
