@@ -6,4 +6,5 @@ $family-sans-serif: 'IBM Plex Sans', sans-serif;
 
 @import '../node_modules/bulma/bulma';
 
+// TODO: refactor old.scss and split into components
 @import './old';
