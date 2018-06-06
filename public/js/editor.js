@@ -6,7 +6,13 @@ pell.init({
   onChange: html => (editorOutput.innerHTML = html),
   defaultParagraphSeparator: 'p',
   actions: ['bold', 'italic', 'underline', 'olist', 'ulist', 'link'],
-  styleWithCSS: false
+  styleWithCSS: false,
+  classes: {
+    actionbar: 'buttons has-addons',
+    button: 'button',
+    content: 'box content',
+    selected: 'has-background-light'
+  }
 });
 
 window.onload = () => {

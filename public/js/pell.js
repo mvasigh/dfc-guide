@@ -163,7 +163,7 @@
   var defaultClasses = {
     actionbar: 'buttons has-addons',
     button: 'button',
-    content: 'content',
+    content: 'box content',
     selected: 'is-dark'
   };
 
