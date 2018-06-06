@@ -1,12 +1,14 @@
-const express = require('express');
-const router = express.Router({ mergeParams: true });
-const _ = require('lodash');
-const Fuse = require('fuse.js');
-const FUSE_CONFIG = require('../config/fuse_config');
-const Item = require('../models/item');
-const Category = require('../models/category');
+const express = require('express'),
+  router = express.Router({ mergeParams: true }),
+  _ = require('lodash'),
+  Fuse = require('fuse.js'),
+  FUSE_CONFIG = require('../config/fuse_config');
 
-// INDEX - show all items
+// Models
+const Item = require('../models/item'),
+  Category = require('../models/category');
+
+// INDEX
 router.get('/', async (req, res) => {
   try {
     let items = await Item.find({});
@@ -17,35 +19,38 @@ router.get('/', async (req, res) => {
       items = fuse.search(req.query.search);
     }
     items = _.chunk(items, 10);
-
-    const options = {
+    res.render('item/index', {
       items,
       categories,
       search: req.query.search || ''
-    };
-
-    res.render('item/index', options);
+    });
   } catch (e) {
     console.log(e);
   }
 });
 
-// NEW - show new item page
+// NEW
 router.get('/new', (req, res) => {
-  res.render('item/new');
+  Category.find({})
+    .then(categories => res.render('item/new', { categories }))
+    .catch(e => console.log(e));
 });
 
-// CREATE - create a new item in db
-router.post('/', (req, res) => {
+// CREATE
+router.post('/', async (req, res) => {
+  const category = await Category.findById(req.body.category);
   req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
-  Item.create(req.body.item)
+
+  Item.create({ ...req.body.item, category })
     .then(item => {
+      category.items.push(item);
+      category.save();
       res.redirect(`/items/${item._id}`);
     })
     .catch(e => console.log(e));
 });
 
-// SHOW - show item by id
+// SHOW
 router.get('/:itemId', async (req, res) => {
   try {
     const item = await Item.findById(req.params.itemId);
@@ -62,7 +67,7 @@ router.get('/:itemId', async (req, res) => {
   }
 });
 
-// EDIT - show item edit form
+// EDIT
 router.get('/:itemId/edit', async (req, res) => {
   try {
     const item = await Item.findById(req.params.itemId);
@@ -75,7 +80,7 @@ router.get('/:itemId/edit', async (req, res) => {
   }
 });
 
-// UPDATE - update database with input
+// UPDATE
 router.put('/:itemId', async (req, res) => {
   // Refactor
   const category = await Category.findById(req.body.category);
@@ -94,14 +99,25 @@ router.put('/:itemId', async (req, res) => {
   });
 });
 
-// DESTROY - delete the item from database
+// DESTROY
 router.delete('/:itemId', (req, res) => {
-  Item.findByIdAndRemove(req.params.itemId, err => {
-    if (err) {
-      console.log(err);
+  Category.updateOne(
+    { items: { _id: req.params.itemId } },
+    {
+      $pull: {
+        items: req.params.itemId
+      }
+    },
+    (err, category) => {
+      if (err) console.log(err);
+      else {
+        Item.findByIdAndRemove(req.params.itemId, err => {
+          if (err) console.log(err);
+          res.redirect('/items');
+        });
+      }
     }
-    res.redirect('/items');
-  });
+  );
 });
 
 module.exports = router;
