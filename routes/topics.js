@@ -1,5 +1,6 @@
-const express = require('express');
-const router = express.Router({ mergeParams: true });
+const express = require('express'),
+  router = express.Router({ mergeParams: true }),
+  _ = require('lodash');
 
 const Topic = require('../models/Topic');
 
@@ -10,11 +11,10 @@ router.get('/new', (req, res) => {
 
 // CREATE
 router.post('/', (req, res) => {
-  const title = req.sanitize(req.body.topic.title);
+  const title = _.startCase(req.sanitize(req.body.topic.title));
 
   Topic.create({ title: title })
     .then(topic => {
-      console.log(topic);
       res.redirect('/guides');
     })
     .catch(err => console.log(err));
