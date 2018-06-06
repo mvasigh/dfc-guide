@@ -10,6 +10,6 @@ pell.init({
 });
 
 window.onload = () => {
-  editor.content.innerHTML = resourceContent;
-  editorOutput.innerHTML = resourceContent;
+  editor.content.innerHTML = resourceContent || '';
+  editorOutput.innerHTML = resourceContent || '';
 };
