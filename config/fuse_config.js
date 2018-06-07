@@ -3,5 +3,6 @@ module.exports = {
   minMatchCharLength: 1,
   shouldSort: true,
   findAllMatches: true,
-  matchAllTokens: false
+  matchAllTokens: false,
+  tokenize: true
 };
