@@ -1,20 +1,26 @@
 <%- layout('layout') -%>
 
-<section class="section">
-  <div class="container">
-      <h1 class="title">Add new category</h1>
-      <form action="/categories" method="POST">
-        <div class="field">
-          <label class="label">Category Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Category Name" name="category[name]">
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-6 is-offset-3">
+          <div class="box">
+            <p class="title is-4 has-text-centered">Add new category</p>
+            <form action="/categories" method="POST">
+              <div class="field">
+                <label class="label">Category Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Category Name" name="category[name]">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="field">
-          <div class="control">
-            <button class="button is-link">Submit</button>
-          </div>
-        </div>
-      </form>
-  </div>
-</section>
+      </div>
+    </div>
+  </section>
