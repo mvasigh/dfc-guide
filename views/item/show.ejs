@@ -12,11 +12,13 @@
                         <h4 class="title is-4">
                             <%= item.title %>
                         </h4>
-                        <a class="button is-pulled-right is-small is-outlined is-grey" href="/items/<%= item._id %>/edit">
-                            <span class="icon is-small">
-                                <i class="fas fa-pencil-alt"></i>
-                            </span>
-                        </a>
+                        <% if (currentUser) { %>
+                            <a class="button is-pulled-right is-small is-outlined is-grey" href="/items/<%= item._id %>/edit">
+                                <span class="icon is-small">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </span>
+                            </a>
+                        <% } %>
                         <div class="tags">
                             <% if (item.tags) { %>
                                 <% item.tags.forEach(tag => { %>
