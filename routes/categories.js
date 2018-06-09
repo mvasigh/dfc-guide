@@ -7,7 +7,7 @@ const express = require('express'),
 const Category = require('../models/category');
 
 // INDEX
-router.get('/', (req, res) => {
+router.get('/', middleware.isLoggedIn, (req, res) => {
   Category.find({}, (err, categories) => {
     if (err) {
       console.log(err);
