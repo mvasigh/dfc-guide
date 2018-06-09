@@ -1,4 +1,5 @@
-<nav class="navbar is-info is-fixed-top is-shadowless" role="navigation" aria-label="main navigation">
+
+<nav class="navbar <%= currentUser ? 'is-dark' : 'is-info'%> is-fixed-top is-shadowless" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item dfc-logo-container" href="/home">
@@ -18,12 +19,14 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu has-background-info" id="navMenu">
+        <div class="navbar-menu <%= currentUser ? 'has-background-dark' : 'has-background-info' %> " id="navMenu">
             <div class="navbar-start">
             </div>
             <div class="navbar-end">
-                <a class="navbar-item has-text-white has-background-info" href="#">Feedback</a>
-                <a class="navbar-item has-text-white has-background-info" href="#">Log Out</a>
+                <a class="navbar-item has-text-white <%= currentUser ? 'has-background-dark' : 'has-background-info' %> " href="#">Feedback</a>
+                <% if (currentUser) { %>
+                    <a class="navbar-item has-text-white has-background-dark" href="/users/logout">Log Out</a>
+                <% } %> 
             </div>
         </div>
     </div>
