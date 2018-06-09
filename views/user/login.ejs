@@ -3,15 +3,31 @@
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-6 is-offset-3">
-          <h1=2 class="subtitle">Log In</h1>
+        <div class="column is-4 is-offset-4">
+          <div class="box">
+            <p class="title is-4 has-text-centered">Log In</p>
             <form action="/users/login" method="POST">
-              <input type="text" name="username" placeholder="Username">
-              <input type="password" name="password" placeholder="Password">
-              <button type="submit" class="button is-outlined is-dark">
-                Log In
-              </button>
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                  <input class="input" type="text" name="username" placeholder="Username">                  
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                  <input class="input" type="password" name="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button type="submit" class="button is-link">
+                    Log In
+                  </button>
+                </div>
+              </div>
             </form>
+          </div>          
         </div>
       </div>
     </div>
