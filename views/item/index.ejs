@@ -7,6 +7,20 @@
           <% include ../components/category_menu %>
         </div>
         <div class="column is-9">
+        <% if (currentUser) { %>
+          <div class="level">
+            <div class="level-right">
+              <p class="level-item">
+                <a class="button" href="/items/new">
+                  <span class="icon">
+                    <i class="fas fa-plus"></i>
+                  </span>
+                  <span>New Item<span>
+                </a>
+              </p>
+            </div>
+          </div>
+        <% } %>
           <% if (search.length > 0) { %>
             <p class="subtitle is-6">Here are your search results for "<%= search %>"</p>
           <% } %>
