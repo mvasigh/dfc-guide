@@ -12,4 +12,8 @@ router.get('/home', async (req, res) => {
   res.render('home', { items });
 });
 
+router.get('/*', (req, res) => {
+  res.render('404');
+});
+
 module.exports = router;
