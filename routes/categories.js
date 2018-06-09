@@ -1,6 +1,9 @@
-const express = require('express');
-const router = express.Router({ mergeParams: true });
-const _ = require('lodash');
+const express = require('express'),
+  router = express.Router({ mergeParams: true }),
+  middleware = require('../middleware'),
+  _ = require('lodash');
+
+// Types
 const Category = require('../models/category');
 
 // INDEX
@@ -15,12 +18,12 @@ router.get('/', (req, res) => {
 });
 
 // NEW
-router.get('/new', (req, res) => {
+router.get('/new', middleware.isLoggedIn, (req, res) => {
   res.render('category/new');
 });
 
 // CREATE
-router.post('/', (req, res) => {
+router.post('/', middleware.isLoggedIn, (req, res) => {
   Category.create(req.body.category, (err, category) => {
     if (err) {
       console.log(err);
@@ -31,8 +34,8 @@ router.post('/', (req, res) => {
 });
 
 // EDIT
-router.get('/:id/edit', (req, res) => {
-  Category.findById(req.params.id, (err, category) => {
+router.get('/:categoryId/edit', middleware.isLoggedIn, (req, res) => {
+  Category.findById(req.params.categoryId, (err, category) => {
     if (err) {
       console.log(err);
     } else {
@@ -42,8 +45,8 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // UPDATE
-router.put('/:id', (req, res) => {
-  Category.findByIdAndUpdate(req.params.id, req.body.category, err => {
+router.put('/:categoryId', middleware.isLoggedIn, (req, res) => {
+  Category.findByIdAndUpdate(req.params.categoryId, req.body.category, err => {
     if (err) {
       console.log(err);
     } else {
@@ -53,8 +56,8 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE
-router.delete('/:id', (req, res) => {
-  Category.findByIdAndRemove(req.params.id, err => {
+router.delete('/:categoryId', middleware.isLoggedIn, (req, res) => {
+  Category.findByIdAndRemove(req.params.categoryId, err => {
     if (err) {
       console.log(err);
     } else {

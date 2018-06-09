@@ -1,10 +1,11 @@
 const express = require('express'),
   router = express.Router({ mergeParams: true }),
+  middleware = require('../middleware'),
   _ = require('lodash'),
   Fuse = require('fuse.js'),
   FUSE_CONFIG = require('../config/fuse_config');
 
-// Models
+// Types
 const Item = require('../models/item'),
   Category = require('../models/category');
 
@@ -30,14 +31,14 @@ router.get('/', async (req, res) => {
 });
 
 // NEW
-router.get('/new', (req, res) => {
+router.get('/new', middleware.isLoggedIn, (req, res) => {
   Category.find({})
     .then(categories => res.render('item/new', { categories }))
     .catch(e => console.log(e));
 });
 
 // CREATE
-router.post('/', async (req, res) => {
+router.post('/', middleware.isLoggedIn, async (req, res) => {
   const category = await Category.findById(req.body.category);
   req.body.item.tags = req.body.item.tags.split(',').map(str => str.trim());
 
@@ -71,7 +72,7 @@ router.get('/:itemId', async (req, res) => {
 });
 
 // EDIT
-router.get('/:itemId/edit', async (req, res) => {
+router.get('/:itemId/edit', middleware.isLoggedIn, async (req, res) => {
   try {
     const item = await Item.findById(req.params.itemId);
     const categories = await Category.find({});
@@ -84,7 +85,7 @@ router.get('/:itemId/edit', async (req, res) => {
 });
 
 // UPDATE
-router.put('/:itemId', async (req, res) => {
+router.put('/:itemId', middleware.isLoggedIn, async (req, res) => {
   // Refactor
   const category = await Category.findById(req.body.category);
   const tags = req.body.item.tags.split(', ').map(tag => tag.trim());
@@ -117,7 +118,7 @@ router.put('/:itemId', async (req, res) => {
 });
 
 // DESTROY
-router.delete('/:itemId', (req, res) => {
+router.delete('/:itemId', middleware.isLoggedIn, (req, res) => {
   Category.updateOne(
     { items: { _id: req.params.itemId } },
     {

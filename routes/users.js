@@ -1,16 +1,18 @@
 const express = require('express'),
   router = express.Router({ mergeParams: true }),
+  middleware = require('../middleware'),
   passport = require('passport');
 
 const User = require('../models/User');
 
+// Below two routes intentionally require user to be logged in to prevent external registrations until user permissions are implemented
 // Registration form
-router.get('/register', (req, res) => {
+router.get('/register', middleware.isLoggedIn, (req, res) => {
   res.render('user/register');
 });
 
 // Register user
-router.post('/register', (req, res) => {
+router.post('/register', middleware.isLoggedIn, (req, res) => {
   const newUser = new User({ username: req.body.username });
   User.register(newUser, req.body.password, (err, user) => {
     if (err) {

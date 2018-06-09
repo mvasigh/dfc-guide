@@ -1,8 +1,9 @@
 const express = require('express'),
   router = express.Router({ mergeParams: true }),
+  middleware = require('../middleware'),
   _ = require('lodash');
 
-// Models
+// Types
 const Guide = require('../models/Guide'),
   Topic = require('../models/Topic');
 
@@ -18,12 +19,12 @@ router.get('/', async (req, res) => {
 });
 
 // NEW
-router.get('/new', (req, res) => {
+router.get('/new', middleware.isLoggedIn, (req, res) => {
   Topic.find({}).then(topics => res.render('guide/new', { topics }));
 });
 
 // CREATE
-router.post('/', async (req, res) => {
+router.post('/', middleware.isLoggedIn, async (req, res) => {
   try {
     const topic = await Topic.findById(req.body.topic);
     const guide = await Guide.create({
@@ -56,7 +57,7 @@ router.get('/:guideId', async (req, res) => {
 });
 
 // EDIT
-router.get('/:guideId/edit', (req, res) => {
+router.get('/:guideId/edit', middleware.isLoggedIn, (req, res) => {
   Guide.findById(req.params.guideId, (err, guide) => {
     if (err) {
       console.log(err);
@@ -68,7 +69,7 @@ router.get('/:guideId/edit', (req, res) => {
 });
 
 // UPDATE
-router.put('/:guideId', (req, res) => {
+router.put('/:guideId', middleware.isLoggedIn, (req, res) => {
   Guide.findByIdAndUpdate(req.params.guideId, req.body.guide, (err, guide) => {
     if (err) {
       console.log(err);
@@ -80,7 +81,7 @@ router.put('/:guideId', (req, res) => {
 });
 
 // DESTROY
-router.delete('/:guideId', (req, res) => {
+router.delete('/:guideId', middleware.isLoggedIn, (req, res) => {
   Guide.findByIdAndRemove(req.params.guideId, err => {
     if (err) {
       console.log(err);
