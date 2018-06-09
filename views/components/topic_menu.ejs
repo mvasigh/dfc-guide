@@ -7,5 +7,7 @@
       <% }) %>
     </ul> 
   <% }) %>
-  <p class="menu-label"><a class="has-text-grey" href="/topics/new">+ Add new topic</a></p>
+  <% if (currentUser) { %> 
+    <p class="menu-label"><a class="has-text-grey" href="/topics/new">+ Add new topic</a></p>
+  <% } %>
 </aside>
