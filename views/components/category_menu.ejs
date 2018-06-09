@@ -4,5 +4,8 @@
     <% categories.forEach(entry => { %>
       <li><a href="/categories/<%= entry._id %>"><%= entry.name %> (<%= entry.items.length %>)</a></li>
     <% }) %> 
+    <% if (currentUser) { %>
+      <li><a href="/categories/new">+ New category</a></li>
+    <% } %>
   </ul>
 </aside>
