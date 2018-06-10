@@ -5,7 +5,15 @@ pell.init({
   element: document.getElementById('editor'),
   onChange: html => (editorOutput.innerHTML = html),
   defaultParagraphSeparator: 'p',
-  actions: ['bold', 'italic', 'underline', 'olist', 'ulist', 'link'],
+  actions: [
+    'bold',
+    'italic',
+    'underline',
+    'olist',
+    'ulist',
+    'link',
+    'heading2'
+  ],
   styleWithCSS: false,
   classes: {
     actionbar: 'buttons has-addons',

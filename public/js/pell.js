@@ -97,7 +97,7 @@
       icon: '<b>H<sub>2</sub></b>',
       title: 'Heading 2',
       result: function result() {
-        return exec(formatBlock, '<h2>');
+        return exec(formatBlock, '<h4>');
       }
     },
     paragraph: {
