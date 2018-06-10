@@ -2,3 +2,5 @@
 package-lock.json
 /config/keys.js
 /temp
+temp/css/main.css
+public/css/main.css
