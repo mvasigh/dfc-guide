@@ -3,7 +3,11 @@
     <p class="menu-label"><%= topic.title %></p>
     <ul class="menu-list">
       <% topic.guides.forEach(entry => { %>
-        <li id="<%= entry.id %>"><a href="/guides/<%= entry.id %>"><%= entry.title %></a></li>
+        <% if (guide._id && String(guide._id) == entry.id) { %>
+          <li data-active="true" id="<%= entry.id %>"><a class="is-active" href="/guides/<%= entry.id %>"><%= entry.title %></a></li>
+        <% } else { %>
+          <li id="<%= entry.id %>"><a href="/guides/<%= entry.id %>"><%= entry.title %></a></li>
+        <% } %>
       <% }) %>
     </ul> 
   <% }) %>
