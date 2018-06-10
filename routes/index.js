@@ -4,7 +4,7 @@ const router = express.Router({ mergeParams: true });
 const Item = require('../models/item');
 
 router.get('/', (req, res) => {
-  res.redirect('/home');
+  res.render('index');
 });
 
 router.get('/home', async (req, res) => {
