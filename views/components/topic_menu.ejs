@@ -3,7 +3,7 @@
     <p class="menu-label"><%= topic.title %></p>
     <ul class="menu-list">
       <% topic.guides.forEach(entry => { %>
-        <li><a href="/guides/<%= entry.id %>"><%= entry.title %></a></li>
+        <li id="<%= entry.id %>"><a href="/guides/<%= entry.id %>"><%= entry.title %></a></li>
       <% }) %>
     </ul> 
   <% }) %>
