@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
   try {
     const topics = await Topic.find({}).populate('guides');
     const guides = await Guide.find({});
-    res.render('guide/index', { topics, guides });
+    res.render('guide/index', { topics, guides, guide: {} });
   } catch (e) {
     console.log(e);
   }
@@ -51,8 +51,6 @@ router.get('/:guideId', async (req, res) => {
   const guide = await Guide.findById(req.params.guideId);
   const topics = await Topic.find({});
 
-  console.log({ guide, topics });
-
   res.render('guide/show', { guide, topics });
 });
 
@@ -86,7 +84,6 @@ router.delete('/:guideId', middleware.isLoggedIn, (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log('Guide deleted');
       res.redirect('/');
     }
   });
