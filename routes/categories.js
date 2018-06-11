@@ -68,7 +68,10 @@ router.delete('/:categoryId', middleware.isLoggedIn, (req, res) => {
 
 router.get('/:categoryId', async (req, res) => {
   try {
-    const categories = await Category.find({});
+    const categories = _.sortBy(
+      await Category.find({}),
+      category => category.name
+    );
     const category = await Category.findById(req.params.categoryId).populate(
       'items'
     );

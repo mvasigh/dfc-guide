@@ -1,6 +1,8 @@
-const express = require('express');
-const router = express.Router({ mergeParams: true });
+const express = require('express'),
+  router = express.Router({ mergeParams: true }),
+  _ = require('lodash');
 
+// Types
 const Item = require('../models/item');
 
 router.get('/', (req, res) => {
@@ -8,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/home', async (req, res) => {
-  const items = await Item.find({});
+  const items = _.sortBy(await Item.find({}), item => item.views);
   res.render('home', { items });
 });
 

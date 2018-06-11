@@ -12,8 +12,11 @@ const Item = require('../models/item'),
 // INDEX
 router.get('/', async (req, res) => {
   try {
-    let items = await Item.find({});
-    const categories = await Category.find({});
+    let items = _.sortBy(await Item.find({}), item => item.views);
+    const categories = _.sortBy(
+      await Category.find({}),
+      category => category.name
+    );
     const fuse = new Fuse(items, FUSE_CONFIG);
 
     if (req.query.search) {
@@ -53,22 +56,20 @@ router.post('/', middleware.isLoggedIn, async (req, res) => {
 
 // SHOW
 router.get('/:itemId', async (req, res) => {
-  try {
-    const item = await Item.findById(req.params.itemId);
-    const categories = await Category.find({});
-    const fuse = new Fuse(await Item.find({}), FUSE_CONFIG);
+  const item = await Item.findByIdAndUpdate(req.params.itemId, {
+    $inc: { views: 1 }
+  });
+  const categories = await Category.find({});
+  const fuse = new Fuse(await Item.find({}), FUSE_CONFIG);
 
-    res.render('item/show', {
-      item,
-      categories,
-      relatedItems: fuse
-        .search(item.category.name)
-        .filter(relatedItem => relatedItem.title != item.title)
-        .filter((entry, i) => i < 4)
-    });
-  } catch (e) {
-    console.log(e);
-  }
+  res.render('item/show', {
+    item,
+    categories,
+    relatedItems: fuse
+      .search(item.category.name)
+      .filter(relatedItem => relatedItem.title != item.title)
+      .filter((entry, i) => i < 4)
+  });
 });
 
 // EDIT
