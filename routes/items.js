@@ -34,10 +34,12 @@ router.get('/', async (req, res) => {
 });
 
 // NEW
-router.get('/new', middleware.isLoggedIn, (req, res) => {
-  Category.find({})
-    .then(categories => res.render('item/new', { categories }))
-    .catch(e => console.log(e));
+router.get('/new', middleware.isLoggedIn, async (req, res) => {
+  const categories = _.sortBy(
+    await Category.find({}),
+    category => category.name
+  );
+  res.render('item/new', { categories });
 });
 
 // CREATE
@@ -49,7 +51,7 @@ router.post('/', middleware.isLoggedIn, async (req, res) => {
     .then(item => {
       category.items.push(item);
       category.save();
-      res.redirect(`/items/${item._id}`);
+      res.redirect('/items');
     })
     .catch(e => console.log(e));
 });
