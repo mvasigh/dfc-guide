@@ -61,7 +61,10 @@ router.get('/:itemId', async (req, res) => {
   const item = await Item.findByIdAndUpdate(req.params.itemId, {
     $inc: { views: 1 }
   });
-  const categories = await Category.find({});
+  const categories = _.sortBy(
+    await Category.find({}),
+    category => category.name
+  );
   const fuse = new Fuse(await Item.find({}), FUSE_CONFIG);
 
   res.render('item/show', {
