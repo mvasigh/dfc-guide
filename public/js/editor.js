@@ -11,6 +11,14 @@ pell.init({
     'underline',
     'olist',
     'ulist',
+    {
+      name: 'superscript',
+      icon: 'sup',
+      title: 'Superscript',
+      result: function result() {
+        return pell.exec('superscript');
+      }
+    },
     'link',
     'heading2'
   ],
