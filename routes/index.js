@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/home', async (req, res) => {
-  const items = _.sortBy(await Item.find({}), item => item.views);
+  const items = _.sortBy(await Item.find({}), item => item.views).reverse();
   res.render('home', { items });
 });
 
