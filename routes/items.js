@@ -20,9 +20,10 @@ router.get('/', async (req, res) => {
     const fuse = new Fuse(items, FUSE_CONFIG);
 
     if (req.query.search) {
-      items = fuse.search(req.query.search);
+      items = fuse.search(req.query.search.replace(' ', '+'));
     }
     items = _.chunk(items, 10);
+
     res.render('item/index', {
       items,
       categories,
