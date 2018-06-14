@@ -23,6 +23,8 @@
             <div class="navbar-start">
             </div>
             <div class="navbar-end">
+                <a class="navbar-item has-text-white <%= currentUser ? 'has-background-dark' : 'has-background-info' %> " href="/items">Community Resources</a>
+                <a class="navbar-item has-text-white <%= currentUser ? 'has-background-dark' : 'has-background-info' %> " href="/guides">Guide Book</a>
                 <a class="navbar-item has-text-white <%= currentUser ? 'has-background-dark' : 'has-background-info' %> " href="#">Feedback</a>
                 <% if (currentUser) { %>
                     <a class="navbar-item has-text-white has-background-dark" href="/users/logout">Log Out</a>
