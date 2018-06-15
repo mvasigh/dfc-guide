@@ -7,6 +7,20 @@
           <% include ../components/category_menu %>
         </div>
         <div class="column is-9">
+          <% if (currentUser) { %>
+            <div class="level">
+              <div class="level-right">
+                <p class="level-item">
+                  <a class="button" href="/items/new">
+                    <span class="icon">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <span>New Item<span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          <% } %>
           <% items.forEach((page, index) => { %>
             <div class="dfc-page" data-page="<%= index %>">
               <% page.forEach(item => { %>
