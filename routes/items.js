@@ -12,7 +12,7 @@ const Item = require('../models/item'),
 // INDEX
 router.get('/', async (req, res) => {
   try {
-    let items = _.sortBy(await Item.find({}), item => item.views);
+    let items = _.sortBy(await Item.find({}), item => item.views).reverse();
     const categories = _.sortBy(
       await Category.find({}),
       category => category.name
