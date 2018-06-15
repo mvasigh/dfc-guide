@@ -9,15 +9,15 @@ const Guide = require('../models/Guide'),
 
 // INDEX
 router.get('/', async (req, res) => {
-  // Refactor
-  res.redirect(`/guides/5b216c99cc015341584bd72b`);
-  // try {
-  //   const topics = await Topic.find({}).populate('guides');
-  //   const guides = await Guide.find({});
-  //   res.render('guide/index', { topics, guides, guide: {} });
-  // } catch (e) {
-  //   console.log(e);
-  // }
+  // // Refactor
+  // res.redirect(`/guides/5b216c99cc015341584bd72b`);
+  try {
+    const topics = await Topic.find({}).populate('guides');
+    const guides = await Guide.find({});
+    res.render('guide/index', { topics, guides, guide: {} });
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 // NEW
