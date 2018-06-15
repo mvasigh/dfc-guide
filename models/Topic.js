@@ -6,7 +6,10 @@ const topicSchema = new mongoose.Schema({
     type: String,
     default: 'Untitled'
   },
-  index: Number,
+  index: {
+    type: Number,
+    default: 10
+  },
   guides: [
     {
       title: String,

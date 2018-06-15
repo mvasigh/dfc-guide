@@ -12,9 +12,11 @@ router.get('/', async (req, res) => {
   // // Refactor
   // res.redirect(`/guides/5b216c99cc015341584bd72b`);
   try {
-    const topics = await Topic.find({}).populate('guides');
-    const guides = await Guide.find({});
-    res.render('guide/index', { topics, guides, guide: {} });
+    const topics = _.sortBy(
+      await Topic.find({}).populate('guides'),
+      topic => topic.index
+    );
+    res.render('guide/index', { topics, guide: {} });
   } catch (e) {
     console.log(e);
   }
@@ -51,7 +53,7 @@ router.post('/', middleware.isLoggedIn, async (req, res) => {
 // SHOW
 router.get('/:guideId', async (req, res) => {
   const guide = await Guide.findById(req.params.guideId);
-  const topics = await Topic.find({});
+  const topics = _.sortBy(await Topic.find({}), topic => topic.index);
 
   res.render('guide/show', { guide, topics });
 });
