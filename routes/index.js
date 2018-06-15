@@ -14,6 +14,10 @@ router.get('/home', async (req, res) => {
   res.render('home', { items });
 });
 
+router.get('/terms', (req, res) => {
+  res.render('terms');
+});
+
 router.get('/*', (req, res) => {
   res.render('404');
 });
