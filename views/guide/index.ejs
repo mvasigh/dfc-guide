@@ -7,19 +7,7 @@
           <% include ../components/topic_menu %>
         </div>
         <div class="column is-9">
-          <% topics.forEach(topic => { %>
-            <% if (topic.guides.length > 0) { %>
-              <p class="title is-4"><%= topic.title %></p>
-                <% topic.guides.forEach(guide => { %>
-                    <div class="box">
-                      <a href="/guides/<%= guide.id %>" class="has-text-dark">
-                        <p class="title is-5"><%= guide.title %></p>
-                        <div class="content"><%= guide.description %></div>
-                      </a>
-                    </div>
-                <% }) %>
-            <% } %>
-          <% }) %>
+          <p class="subtitle is-5 has-text-grey has-text-centered">Choose an item from the menu to get started.</p>
         </div>
       </div>
     </div>
