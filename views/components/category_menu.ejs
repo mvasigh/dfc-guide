@@ -3,7 +3,11 @@
   <ul class="menu-list">
     <% categories.forEach(entry => { %>
       <% if (entry.items.length > 0) { %>
+        <% if (String(category._id) == String(entry._id)) { %>
+          <li><a class="is-active" href="/categories/<%= entry._id %>"><%= entry.name %> (<%= entry.items.length %>)</a></li>
+        <% } else { %>
         <li><a href="/categories/<%= entry._id %>"><%= entry.name %> (<%= entry.items.length %>)</a></li>
+        <% } %>
       <% } %>
     <% }) %> 
     <% if (currentUser) { %>

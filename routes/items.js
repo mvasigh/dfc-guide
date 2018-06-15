@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
     res.render('item/index', {
       items,
       categories,
+      category: {},
       search: req.query.search || ''
     });
   } catch (e) {
@@ -71,6 +72,7 @@ router.get('/:itemId', async (req, res) => {
   res.render('item/show', {
     item,
     categories,
+    category: {},
     relatedItems: fuse
       .search(item.category.name)
       .filter(relatedItem => relatedItem.title != item.title)

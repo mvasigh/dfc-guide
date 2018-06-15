@@ -76,7 +76,12 @@ router.get('/:categoryId', async (req, res) => {
       'items'
     );
     items = _.chunk(category.items, 10);
-    res.render('category/show', { items, categories });
+
+    res.render('category/show', {
+      items,
+      categories,
+      category
+    });
   } catch (e) {
     console.log(e);
   }
