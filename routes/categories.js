@@ -75,7 +75,7 @@ router.get('/:categoryId', async (req, res) => {
     const category = await Category.findById(req.params.categoryId).populate(
       'items'
     );
-    items = _.chunk(category.items, 10);
+    items = _.chunk(_.sortBy(category.items, item => item.views).reverse(), 10);
 
     res.render('category/show', {
       items,
