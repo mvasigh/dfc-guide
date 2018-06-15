@@ -1,4 +1,9 @@
-<aside class="menu">
+<div class="level is-hidden-tablet">
+  <button class="button is-light is-fullwidth" id="collapse-btn">
+    <span id="collapse-btn-text">[ + ] Expand menu options</span>
+  </button>
+</div>
+<aside class="menu is-hidden-mobile">
   <% topics.forEach(topic => { %>
     <p class="menu-label"><%= topic.title %></p>
     <ul class="menu-list">
@@ -15,3 +20,5 @@
     <p class="menu-label"><a class="has-text-grey" href="/topics/new">+ Add new topic</a></p>
   <% } %>
 </aside>
+
+<script src="/js/menu.js"></script>
