@@ -1,4 +1,5 @@
 const express = require('express'),
+  path = require('path'),
   mongoose = require('mongoose'),
   passport = require('passport'),
   LocalStrategy = require('passport-local'),
@@ -22,11 +23,7 @@ mongoose
 // ==============
 const app = express();
 
-app.engine('ejs', engine);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(
   bodyParser.urlencoded({
     extended: true
@@ -63,19 +60,19 @@ app.use((req, res, next) => {
 // ===============
 // ROUTES
 // ===============
-const itemsRoutes = require('./routes/items'),
-  categoriesRoutes = require('./routes/categories'),
-  guidesRoutes = require('./routes/guides'),
-  topicsRoutes = require('./routes/topics'),
-  usersRoutes = require('./routes/users'),
-  indexRoutes = require('./routes/index');
+const itemsRoutes = require('./routes/api/items'),
+  categoriesRoutes = require('./routes/api/categories'),
+  guidesRoutes = require('./routes/api/guides'),
+  topicsRoutes = require('./routes/api/topics');
 
-app.use('/items', itemsRoutes);
-app.use('/categories', categoriesRoutes);
-app.use('/guides', guidesRoutes);
-app.use('/topics', topicsRoutes);
-app.use('/users', usersRoutes);
-app.use('/', indexRoutes);
+app.use('/api/items', itemsRoutes);
+app.use('/api/categories', categoriesRoutes);
+app.use('/api/guides', guidesRoutes);
+app.use('/api/topics', topicsRoutes);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
