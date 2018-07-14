@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import promise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
+import './index.css';
 
 import reducers from './reducers';
 import App from './App';
