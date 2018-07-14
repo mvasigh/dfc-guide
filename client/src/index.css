@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.dfc-hero-logo img {
+  background-color: #186bb3;
+  box-shadow: 0.1rem 0.4rem 2.5rem rgba(0, 0, 0, 0.1);
+  padding: 0.6rem;
+  margin: 1.6rem auto 0.8rem;
+  width: 30%;
+  max-width: 8rem;
+  border-radius: 50%;
+}
