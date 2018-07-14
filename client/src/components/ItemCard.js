@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ItemCard = ({ id, title, category, tags, description }) => {
+const ItemCard = ({
+  id,
+  title,
+  category = '',
+  tags = [],
+  description = ''
+}) => {
   const renderTags = tags =>
     tags.map((tag, i) => (
-      <Link className="tag is-light is-rounded" to={`/items?search=${tag}`}>
+      <Link
+        key={i}
+        className="tag is-light is-rounded"
+        to={`/items?search=${tag}`}
+      >
         {tag}
       </Link>
     ));
