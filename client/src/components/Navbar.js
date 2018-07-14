@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav
-      class="navbar is-fixed-top is-shadowless is-info"
+      className="navbar is-fixed-top is-shadowless is-info"
       role="navigation"
       aria-label="main navigation"
     >
