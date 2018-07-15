@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 
 import Home from './pages/Home';
 import ItemsIndex from './pages/Items/ItemsIndex';
+import ItemsShow from './pages/Items/ItemsShow';
+import Guides from './pages/Guides';
 import Terms from './pages/Terms';
 import Footer from './components/Footer';
 
@@ -18,7 +20,10 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/terms" component={Terms} />
+            <Route path="/items/:itemId" component={ItemsShow} />
             <Route path="/items" component={ItemsIndex} />
+            <Route path="/guides/:guideId" component={Guides} />
+            <Route exact path="/guides/" component={Guides} />
           </Switch>
           <Footer />
         </div>
