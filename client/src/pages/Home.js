@@ -63,7 +63,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="dfc-page-container">
         <section className="hero is-link is-bold is-medium">
           <div className="hero-body">
             <div className="container has-text-centered">
