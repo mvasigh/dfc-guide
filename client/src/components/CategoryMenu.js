@@ -7,10 +7,10 @@ class CategoryMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      collapsed: false
+      collapsed: true
     };
 
-    this.handlExpandClick = this.handlExpandClick.bind(this);
+    this.handleExpandClick = this.handleExpandClick.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleResize = _.debounce(this.handleResize, 200);
   }
@@ -21,7 +21,7 @@ class CategoryMenu extends Component {
     }
   }
 
-  handlExpandClick() {
+  handleExpandClick() {
     const collapsed = !this.state.collapsed;
     this.setState({ collapsed });
   }
@@ -62,7 +62,7 @@ class CategoryMenu extends Component {
         <div className="level is-hidden-tablet">
           <button
             className="button is-light is-fullwidth"
-            onClick={this.handlExpandClick}
+            onClick={this.handleExpandClick}
           >
             {collapsed
               ? '[ + ] Expand menu options'
@@ -73,7 +73,21 @@ class CategoryMenu extends Component {
           className={`menu ${collapsed === true ? 'is-hidden-mobile' : ''}`}
         >
           <p className="menu-label">Categories</p>
-          <ul className="menu-list">{this.renderCategories()}</ul>
+          <ul className="menu-list">
+            <li>
+              <Link
+                to={{
+                  pathname: '/items',
+                  state: {
+                    filter: ''
+                  }
+                }}
+              >
+                <strong>Show All Items</strong>
+              </Link>
+            </li>
+            {this.renderCategories()}
+          </ul>
         </aside>
       </div>
     );
