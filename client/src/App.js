@@ -23,7 +23,7 @@ class App extends Component {
             <Route path="/items/:itemId" component={ItemsShow} />
             <Route path="/items" component={ItemsIndex} />
             <Route path="/guides/:guideId" component={Guides} />
-            <Route exact path="/guides/" component={Guides} />
+            <Route exact path="/guides" component={Guides} />
           </Switch>
           <Footer />
         </div>
