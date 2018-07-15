@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ItemsIndex from './pages/Items/ItemsIndex';
 import Terms from './pages/Terms';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/terms" component={Terms} />
             <Route path="/items" component={ItemsIndex} />
           </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );
