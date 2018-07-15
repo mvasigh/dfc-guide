@@ -68,7 +68,7 @@ class Home extends Component {
           <div className="hero-body">
             <div className="container has-text-centered">
               <div className="dfc-hero-logo">
-                <img src={logo} />
+                <img alt="Doctors for Change" src={logo} />
               </div>
               <h1 className="title">DFC Guide</h1>
               <h2 className="subtitle">
