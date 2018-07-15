@@ -26,6 +26,12 @@ class ItemsIndex extends Component {
     }
   }
 
+  componentWillReceiveProps() {
+    if (this.props.location.state) {
+      this.setState({ filterCategoryName: this.props.location.state.filter });
+    }
+  }
+
   renderItemList() {
     if (this.state.filterCategoryName === '') {
       return <ItemsList items={this.props.items} />;
