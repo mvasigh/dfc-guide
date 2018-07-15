@@ -4,18 +4,28 @@ import { fetchCategories, fetchItem } from '../../actions';
 
 import CategoryMenu from '../../components/CategoryMenu';
 import ItemCard from '../../components/ItemCard';
-import ItemsList from '../../components/ItemsList';
 
 class ItemsShow extends Component {
   componentDidMount() {
     const { itemId } = this.props.match.params;
     this.props.fetchItem(itemId);
     this.props.fetchCategories();
+
+    this.handleCategoryClick = this.handleCategoryClick.bind(this);
   }
 
   componentDidUpdate() {
     const { itemId } = this.props.match.params;
     this.props.fetchItem(itemId);
+  }
+
+  handleCategoryClick(e) {
+    this.props.history.push({
+      pathname: '/items',
+      state: {
+        filter: e.target.id
+      }
+    });
   }
 
   renderItemDetail() {
@@ -61,7 +71,7 @@ class ItemsShow extends Component {
           <div className="container">
             <div className="columns">
               <div className="column is-one-third">
-                <CategoryMenu />
+                <CategoryMenu onCategoryClick={this.handleCategoryClick} />
               </div>
               <div className="column is-two-thirds">
                 {this.renderItemDetail()}
