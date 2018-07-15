@@ -1,35 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import _ from 'lodash';
 import ItemCard from './ItemCard';
 
-export class ItemsList extends Component {
-  renderList(items) {}
-
-  render() {
-    let cardWidth;
-    switch (this.props.col) {
-      case 2:
-        cardWidth = 'half';
-        break;
-      case 3:
-        cardWidth = 'one-third';
-        break;
-      case 4:
-        cardWidth = 'one-fourth';
-        break;
-    }
-
-    return (
-      <div className="columns">
-        <ItemCard
-          id={1}
-          title="Hello World"
-          description="Wow this is truly a wonderful React component"
-          category="test"
-          tags={['hello', 'world']}
-        />
-      </div>
-    );
-  }
-}
+const ItemsList = ({ items }) => {
+  const renderItemsList = () =>
+    _.map(items, item => (
+      <ItemCard
+        key={item._id}
+        id={item._id}
+        title={item.title}
+        description={item.description}
+        category={item.category.name}
+        tags={item.tags}
+      />
+    ));
+  return <div>{renderItemsList()}</div>;
+};
 
 export default ItemsList;
