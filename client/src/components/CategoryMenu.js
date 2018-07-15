@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class CategoryMenu extends Component {
   constructor(props) {
@@ -37,7 +38,19 @@ class CategoryMenu extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  renderCategories() {}
+  renderCategories() {
+    const categories = _.filter(
+      this.props.categories,
+      cat => cat.items.length > 0
+    );
+    return _.map(categories, cat => (
+      <li key={cat._id}>
+        <Link to={`/categories/${cat._id}`}>{`${cat.name} (${
+          cat.items.length
+        })`}</Link>
+      </li>
+    ));
+  }
 
   render() {
     const { collapsed } = this.state;
@@ -49,13 +62,16 @@ class CategoryMenu extends Component {
             className="button is-light is-fullwidth"
             onClick={this.handlExpandClick}
           >
-            {'[ + ] Expand menu options'}
+            {collapsed
+              ? '[ + ] Expand menu options'
+              : '[ - ] Collapse menu options'}
           </button>
         </div>
         <aside
           className={`menu ${collapsed === true ? 'is-hidden-mobile' : ''}`}
         >
           <p className="menu-label">Categories</p>
+          <ul className="menu-list">{this.renderCategories()}</ul>
         </aside>
       </div>
     );
