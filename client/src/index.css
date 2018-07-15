@@ -13,3 +13,11 @@ body {
   max-width: 8rem;
   border-radius: 50%;
 }
+
+.dfc-category-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem !important;
+  font-weight: 500;
+}
