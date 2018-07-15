@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchCategories, fetchItems } from '../../actions';
 
 import CategoryMenu from '../../components/CategoryMenu';
+import ItemsList from '../../components/ItemsList';
 
 class ItemsIndex extends Component {
   componentDidMount() {
@@ -14,17 +15,17 @@ class ItemsIndex extends Component {
   renderItemList() {}
 
   render() {
-    console.log(this.props.categories);
-
     return (
-      <div>
+      <div className="dfc-page-container">
         <section className="section">
           <div className="container">
             <div className="columns">
               <div className="column is-one-third">
                 <CategoryMenu />
               </div>
-              <div className="column is-two-thirds" />
+              <div className="column is-two-thirds">
+                <ItemsList items={this.props.items} />
+              </div>
             </div>
           </div>
         </section>
