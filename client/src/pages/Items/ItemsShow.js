@@ -6,16 +6,22 @@ import CategoryMenu from '../../components/CategoryMenu';
 import ItemCard from '../../components/ItemCard';
 
 class ItemsShow extends Component {
-  componentDidMount() {
-    const { itemId } = this.props.match.params;
-    this.props.fetchItem(itemId);
-    this.props.fetchCategories();
+  constructor(props) {
+    super(props);
 
     this.handleCategoryClick = this.handleCategoryClick.bind(this);
   }
 
-  componentDidUpdate() {
+  componentDidMount() {
     const { itemId } = this.props.match.params;
+    this.props.fetchItem(itemId);
+    this.props.fetchCategories();
+  }
+
+  // Fix infinite loop of API requests...
+  componentWillReceiveProps() {
+    const itemId = this.props.location.state.itemId;
+
     this.props.fetchItem(itemId);
   }
 
@@ -48,7 +54,7 @@ class ItemsShow extends Component {
   }
 
   renderRelatedItems() {
-    if (this.props.item.relatedItems) {
+    if (this.props.item && this.props.item.relatedItems) {
       const { relatedItems } = this.props.item;
       return relatedItems.map(item => (
         <div key={item._id} className="column is-half">
