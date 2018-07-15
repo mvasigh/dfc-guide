@@ -24,14 +24,14 @@ router.get('/:itemId', async (req, res) => {
     $inc: { views: 1 }
   });
   const fuse = new Fuse(await Item.find({}), FUSE_CONFIG);
+  const relatedItems = fuse
+    .search(item.category.name)
+    .filter(related => related.title != item.title)
+    .filter((entry, i) => i < 4);
 
-  res.json({
-    item,
-    relatedItems: fuse
-      .search(item.category.name)
-      .filter(relatedItem => relatedItem.title != item.title)
-      .filter((entry, i) => i < 4)
-  });
+  const response = Object.assign({ relatedItems }, item._doc);
+
+  res.json(response);
 });
 
 // // NEW
