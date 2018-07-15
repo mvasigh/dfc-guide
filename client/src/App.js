@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
 
 import Home from './pages/Home';
+import ItemsIndex from './pages/Items/ItemsIndex';
 import Terms from './pages/Terms';
-import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
@@ -12,8 +14,10 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/terms" component={Terms} />
+            <Route exact path="/" component={Home} />
+            <Route path="/home" component={Home} />
+            <Route path="/terms" component={Terms} />
+            <Route path="/items" component={ItemsIndex} />
           </Switch>
         </div>
       </BrowserRouter>
