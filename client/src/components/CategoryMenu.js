@@ -45,9 +45,11 @@ class CategoryMenu extends Component {
     );
     return _.map(categories, cat => (
       <li key={cat._id}>
-        <Link to={`/categories/${cat._id}`}>{`${cat.name} (${
-          cat.items.length
-        })`}</Link>
+        <a
+          onClick={this.props.onCategoryClick}
+          id={cat.name}
+          className={`${cat.name === this.props.active ? 'is-active' : ''}`}
+        >{`${cat.name} (${cat.items.length})`}</a>
       </li>
     ));
   }
