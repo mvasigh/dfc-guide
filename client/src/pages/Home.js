@@ -31,7 +31,7 @@ class Home extends Component {
         title: 'How to Use the DFC Guide',
         description:
           'Learn how you can most effectively use the Guide to find what you are looking for.',
-        to: '/guides'
+        to: '/guides/5b2325d6150ba65740e504a1'
       }
     ];
 
