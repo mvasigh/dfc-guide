@@ -14,10 +14,21 @@ body {
   border-radius: 50%;
 }
 
+.dfc-footer-logo {
+  margin: 0 auto 0.8rem;
+  width: 30%;
+  max-width: 5rem;
+  fill: #7a7a7a;
+}
+
 .dfc-category-label {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.8rem !important;
   font-weight: 500;
+}
+
+.dfc-page-container {
+  padding-top: 52px;
 }
