@@ -13,3 +13,12 @@ export function fetchItems() {
     payload: request
   };
 }
+
+export function fetchCategories() {
+  const request = axios.get('/api/categories');
+
+  return {
+    type: FETCH_CATEGORIES,
+    payload: request
+  };
+}
