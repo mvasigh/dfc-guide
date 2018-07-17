@@ -8,7 +8,6 @@ import ItemCard from '../../components/ItemCard';
 class ItemsShow extends Component {
   constructor(props) {
     super(props);
-
     this.handleCategoryClick = this.handleCategoryClick.bind(this);
   }
 
@@ -16,13 +15,6 @@ class ItemsShow extends Component {
     const { itemId } = this.props.match.params;
     this.props.fetchItem(itemId);
     this.props.fetchCategories();
-  }
-
-  // Fix infinite loop of API requests...
-  componentWillReceiveProps() {
-    const itemId = this.props.location.state.itemId;
-
-    this.props.fetchItem(itemId);
   }
 
   handleCategoryClick(e) {
@@ -96,7 +88,6 @@ class ItemsShow extends Component {
 
 function mapStateToProps({ items }, ownProps) {
   const { itemId } = ownProps.match.params;
-
   return { items, item: items[itemId] };
 }
 

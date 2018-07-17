@@ -20,7 +20,12 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/terms" component={Terms} />
-            <Route path="/items/:itemId" component={ItemsShow} />
+            <Route
+              path="/items/:itemId"
+              render={props => (
+                <ItemsShow key={props.match.params.itemId} {...props} />
+              )}
+            />
             <Route path="/items" component={ItemsIndex} />
             <Route path="/guides/:guideId" component={Guides} />
             <Route exact path="/guides" component={Guides} />
