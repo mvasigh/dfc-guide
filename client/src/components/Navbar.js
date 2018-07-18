@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import SearchForm from './SearchForm';
+import logo from '../logo.svg';
 
 class Navbar extends Component {
   constructor(props) {
@@ -25,14 +27,16 @@ class Navbar extends Component {
     return (
       <nav
         className="navbar is-fixed-top is-shadowless is-info"
-        role="navigation"
         aria-label="main navigation"
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link className="navbar-item dfc-logo-container" to="/home">
-              DFC
+            <Link className="navbar-item dfc-logo-container" to="/">
+              <img alt="Doctors for Change" src={logo} />
             </Link>
+            <span className="navbar-item">
+              <SearchForm />
+            </span>
             <a
               role="button"
               className="navbar-burger has-text-white"
