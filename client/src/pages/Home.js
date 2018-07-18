@@ -7,6 +7,7 @@ import ItemCard from '../components/ItemCard';
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
 import BasicCard from '../components/BasicCard';
+import SearchForm from '../components/SearchForm';
 
 class Home extends Component {
   componentDidMount() {
@@ -45,7 +46,7 @@ class Home extends Component {
   }
 
   renderMostViewed() {
-    if (this.props.items != {}) {
+    if (this.props.items !== {}) {
       const items = _.sortBy(this.props.items, 'views').slice(0, 6);
       return _.map(items, (item, i) => (
         <div key={i} className="column is-one-third">
@@ -77,21 +78,7 @@ class Home extends Component {
               </h2>
               <div className="columns is-centered">
                 <div className="column is-half is-narrow">
-                  <form action="/items" method="GET">
-                    <div className="field">
-                      <div className="control has-icons-left">
-                        <input
-                          type="text"
-                          className="input is-medium is-rounded"
-                          placeholder="Search the Guide..."
-                          name="search"
-                        />
-                        <span className="icon is-left is-medium">
-                          <i className="fas fa-search" />
-                        </span>
-                      </div>
-                    </div>
-                  </form>
+                  <SearchForm large />
                 </div>
               </div>
             </div>
