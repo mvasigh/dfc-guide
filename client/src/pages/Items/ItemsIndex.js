@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import queryString from 'query-string';
 import { connect } from 'react-redux';
 import { fetchCategories, fetchItems } from '../../actions';
 
@@ -18,7 +19,8 @@ class ItemsIndex extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchItems();
+    const { search } = queryString.parse(this.props.location.search);
+    this.props.fetchItems(search);
     this.props.fetchCategories();
 
     if (this.props.location.state) {
@@ -50,6 +52,7 @@ class ItemsIndex extends Component {
   }
 
   render() {
+
     return (
       <div className="dfc-page-container">
         <section className="section">
