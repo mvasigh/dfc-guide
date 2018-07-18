@@ -6,8 +6,9 @@ export const FETCH_CATEGORIES = 'fetch_categories';
 export const FETCH_GUIDES = 'fetch_guides';
 export const FETCH_TOPICS = 'fetch_topics';
 
-export function fetchItems() {
-  const request = axios.get('/api/items');
+export function fetchItems(searchTerm = '') {
+  const query = searchTerm ? `?search=${searchTerm}` : '';
+  const request = axios.get(`/api/items${query}`);
 
   return {
     type: FETCH_ITEMS,
